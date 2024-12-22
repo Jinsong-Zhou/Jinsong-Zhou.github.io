@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Lorem ipsum"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
+title                    : "Jinsong ZHou"
+description              : "Jinsong Zhou is a first-year MPhil Student of the Hong Kong University of Science and Technology (Guangzhou)."
 repository               : "Jinsong-Zhou/Jinsong-Zhou.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -21,10 +21,10 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Lorem ipsum"
+  name             : "Jinsong Zhou"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
-  location         : "Beijing, China"
+  bio              : "HKUST(GZ)"
+  location         : "Guangzhou, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
@@ -37,7 +37,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "https://github.com/Jinsong-Zhou"
   google_plus      :
   keybase          :
   instagram        :
