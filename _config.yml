@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Jinsong ZHou"
-description              : "Jinsong Zhou is a first-year MPhil Student of the Hong Kong University of Science and Technology (Guangzhou)."
+description              : "First-year MPhil Student, HKUST(GZ)."
 repository               : "Jinsong-Zhou/Jinsong-Zhou.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,12 +23,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Jinsong Zhou"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "HKUST(GZ)"
+  # bio              : "HKUST(GZ)"
   location         : "Guangzhou, China"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
+  # googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+  email            : "jzhou945@connect.hkust-gz.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
