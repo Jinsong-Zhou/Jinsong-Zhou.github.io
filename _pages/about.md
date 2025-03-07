@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Jinsong Zhou (周劲松), a MPhil student (2024.09,–) at [AI Thrust, Information Hub](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/information-hub/) of [The Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn). I am fortunate to be advised by [Prof. Yingcong Chen](https://envision-research.hkust-gz.edu.cn) and Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/). 
+Jinsong Zhou (周劲松), a MPhil student (2024.09,–) at [AI Thrust, Information Hub](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/information-hub/) of [The Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn). I am fortunate to be advised by [Prof. Yingcong Chen](https://envision-research.hkust-gz.edu.cn) and Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/). Previously, I obtained my bachelor’s degree from the [Department of Statistics and Data Science](https://stat-ds.sustech.edu.cn) at [Southern University of Science and Technology](https://www.sustech.edu.cn/en/).
 
 
 <!-- I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
