@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Jinsong Zhou (周劲松), a MPhil student (2024.09,–) at [AI Thrust, Information Hub](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/information-hub/) of [The Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn). I am fortunate to be advised by [Prof. Yingcong Chen](https://envision-research.hkust-gz.edu.cn) and Prof. [Hao Chen](https://cse.hkust.edu.hk/~jhc/). Previously, I obtained my bachelor’s degree from the [Department of Statistics and Data Science](https://stat-ds.sustech.edu.cn) at [Southern University of Science and Technology](https://www.sustech.edu.cn/en/).
+Jinsong Zhou (周劲松), a MPhil student (2024.09,–) at [AI Thrust, Information Hub](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/information-hub/) of [The Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn). I am fortunate to be advised by [Prof. Yingcong Chen](https://envision-research.hkust-gz.edu.cn). Previously, I obtained my bachelor’s degree from the [Department of Statistics and Data Science](https://stat-ds.sustech.edu.cn) at [Southern University of Science and Technology](https://www.sustech.edu.cn/en/).
 
 
 <!-- I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
@@ -47,7 +47,10 @@ Jinsong Zhou (周劲松), a MPhil student (2024.09,–) at [AI Thrust, Informati
 # 📖 Educations
 - *2024.09 - now*, MPhil, Artificial Intelligence, HKUST(GZ), China
 - *2020.09 - 2024,07* B.Sc., Statistics, [SUSTech](https://www.sustech.edu.cn/en/), China
-- *2023.03 - 2024,07* Exchange semester, UC Irvine, America 
+- *2023.03 - 2024,07* Exchange semester, UC Irvine, America
+
+# 💻 Internships
+- *2025.05 -new*, DouYing Risk Control Algorithm Intern, ByteDance, China | Developed Multi-Agent System for risk control scenarios
 
 # 🎖 Honors and Awards
 - *2023.10* First-Class Merit Student Scholarship (Top 5%), [SUSTech](https://www.sustech.edu.cn/en/), China 
