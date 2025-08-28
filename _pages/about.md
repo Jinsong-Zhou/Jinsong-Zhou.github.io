@@ -25,7 +25,7 @@ Jinsong Zhou (周劲松), a MPhil student (2024.09,–) at [AI Thrust, Informati
 - *2023.03 - 2024,07* Exchange semester, UC Irvine, America
 
 # 💻 Internships
-- *2025.05 -new*, DouYing Risk Control Algorithm Intern, ByteDance, China
+- *2025.05 -now*, DouYing Risk Control Algorithm Intern, ByteDance, China
 
 # 🎖 Honors and Awards
 - *2024.09* HKUST MPhil Full Schlolarship, HKUST(GZ), China 
