@@ -1,16 +1,19 @@
 # main links links
 main:
-  - title: "About"
+  - title: "About Me"
     url: "/#about-me"
 
-  - title: "Experience"
-    url: "/#experience"
+  - title: "Experiences"
+    url: "/#experiences"
 
-  - title: "Research"
-    url: "/#research"
+  - title: "Publications"
+    url: "/#publications"
 
   - title: "Open Source"
     url: "/#open-source"
 
-  - title: "Education"
-    url: "/#education"
+  - title: "Educations"
+    url: "/#educations"
+
+  - title: "Honors and Awards"
+    url: "/#honors-and-awards"
