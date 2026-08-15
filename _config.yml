@@ -6,9 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Jinsong ZHou"
-description              : "HKUST(GZ)."
+title                    : "Jinsong Zhou"
+description              : "AI Agent engineer, researcher, and founder building reliable systems from research to production."
 repository               : "Jinsong-Zhou/Jinsong-Zhou.github.io"
+url                      : "https://jinsong-zhou.github.io"
+baseurl                  : ""
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -22,13 +24,13 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Jinsong Zhou"
-  avatar           : "images/android-chrome-512x512.png"
-  # bio              : "HKUST(GZ)"
+  avatar           : "/images/android-chrome-512x512.png"
+  bio              : "AI Agent Engineer · Researcher · Founder"
   location         : "Guangzhou, China"
   employer         :
   pubmed           : 
   # googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "jzhou945@connect.hkust-gz.edu.cn"
+  email            : "jinsongzhou14@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -37,7 +39,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/Jinsong-Zhou"
+  github           : "Jinsong-Zhou"
   google_plus      :
   keybase          :
   instagram        :
