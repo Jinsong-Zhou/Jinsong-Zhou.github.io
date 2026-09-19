@@ -24,7 +24,7 @@ google_analytics_id      :  # get google_analytics_id from https://analytics.goo
 #   mapmyvisitors -> https://mapmyvisitors.com/
 # Leave id empty to hide the section entirely.
 visitor_map:
-  provider               : clustrmaps
+  provider               : mapmyvisitors
   id                     :
 
 # SEO Related
