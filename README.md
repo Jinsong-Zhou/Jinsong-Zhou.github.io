@@ -24,7 +24,7 @@ supported in text fields. The navigation links are in
 | `_includes/publication.html` | One publication card (shared by homepage and publications page) |
 | `_layouts/home.html` | Renders the content into sections |
 | `_layouts/default.html` | HTML shell (head, nav, footer) |
-| `_includes/` | `head`, `nav`, `footer`, `icons`, `seo` partials |
+| `_includes/` | `head`, `nav`, `footer`, `icons`, `seo`, `visitor_map` partials |
 | `assets/css/site.css` | Design system and all styles |
 | `assets/js/site.js` | Mobile menu, scroll spy, reveal animation |
 | `images/` | Avatar and favicons |
@@ -37,6 +37,21 @@ bundle exec jekyll serve
 ```
 
 Then open <http://localhost:4000>.
+
+## Visitor map
+
+The homepage ends with a "Visitors" section: a world map from
+[ClustrMaps](https://clustrmaps.com/) that shows where readers come from,
+with today's visitors highlighted. GitHub Pages is static and cannot count
+visitors itself, so the map is a third-party widget and needs an account:
+
+1. Sign up at <https://clustrmaps.com/> and register `https://jinsong-zhou.github.io`.
+2. In the embed code ClustrMaps gives you, copy the id after `map_v2.js?d=`.
+3. Put it in `_config.yml` as `clustrmaps_id`. The section text lives under
+   `visitors` in `_data/profile.yml`.
+
+Leave `clustrmaps_id` empty and the section is not rendered at all. The
+markup and colors are in `_includes/visitor_map.html`.
 
 ## Publications synced from Google Scholar
 

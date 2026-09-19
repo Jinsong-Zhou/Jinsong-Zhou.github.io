@@ -1,0 +1,26 @@
+{%- comment -%}
+ClustrMaps visitor map. Renders only when site.clustrmaps_id is set.
+Colors: cl = map background, co = land, cmn = today's visitors, cmo = earlier
+visitors, ct = label text. The widget is a rendered image, so it keeps the
+light-theme background in dark mode; the wrapper card fades it in gently.
+{%- endcomment -%}
+{%- if site.clustrmaps_id and site.clustrmaps_id != "" -%}
+{%- assign p = site.data.profile.visitors -%}
+<section class="section" id="visitors">
+  <div class="section__inner">
+    <header class="section__header reveal">
+      <h2 class="section__title">{{ p.heading | default: "Visitors" }}</h2>
+      {% if p.lead %}<p class="section__lead">{{ p.lead }}</p>{% endif %}
+    </header>
+    <div class="visitors reveal">
+      <div class="visitors__map">
+        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d={{ site.clustrmaps_id }}&cl=f5f5f7&w=a&t=tt&co=d2d2d7&cmn=ff453a&cmo=0a84ff&ct=1d1d1f"></script>
+        <noscript><a href="https://clustrmaps.com/site/{{ site.clustrmaps_id }}">Visitor map on ClustrMaps</a></noscript>
+      </div>
+      <p class="visitors__note">
+        Powered by <a href="https://clustrmaps.com/site/{{ site.clustrmaps_id }}">ClustrMaps</a> · updates once a day.
+      </p>
+    </div>
+  </div>
+</section>
+{%- endif -%}
