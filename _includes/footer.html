@@ -1,0 +1,10 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <ul class="footer__links">
+      {% for link in site.data.profile.footer.links %}
+      <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {% endfor %}
+    </ul>
+    <p class="footer__copy">Copyright &copy; {{ 'now' | date: '%Y' }} {{ site.data.profile.hero.name }}. All rights reserved.</p>
+  </div>
+</footer>

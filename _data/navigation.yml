@@ -1,22 +1,16 @@
-# main links links
+# Top navigation links (anchor ids match sections in _layouts/home.html)
 main:
-  - title: "About Me"
-    url: "/#about-me"
-
+  - title: "About"
+    url: "#about"
   - title: "Experiences"
-    url: "/#experiences"
-
+    url: "#experiences"
   - title: "Publications"
-    url: "/#publications"
-
+    url: "#publications"
   - title: "Open Source"
-    url: "/#open-source"
-
-  - title: "Educations"
-    url: "/#educations"
-
-  - title: "Honors and Awards"
-    url: "/#honors-and-awards"
-
+    url: "#open-source"
+  - title: "Education"
+    url: "#education"
+  - title: "Honors"
+    url: "#honors"
   - title: "Skills"
-    url: "/#skills"
+    url: "#skills"
