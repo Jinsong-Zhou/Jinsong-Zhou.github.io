@@ -3,50 +3,37 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 0,
-  "citedby5y": 0,
-  "hindex": 0,
-  "i10index": 0,
-  "updated": "",
+  "citedby": 53,
+  "citedby5y": 53,
+  "hindex": 4,
+  "i10index": 3,
+  "updated": "2026-09-19",
   "publications": [
     {
-      "title": "VideoMemory: Toward Consistent Video Generation via Memory Integration",
+      "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
+      "title": "Videomemory: Toward consistent video generation via memory integration",
       "authors": [
         "Jinsong Zhou",
         "Yihua Du",
         "Xinli Xu",
-        "Yingcong Chen"
+        "Luozhou Wang",
+        "Zijie Zhuang",
+        "Yehang Zhang",
+        "Shuaibo Li",
+        "Xiaojun Hu",
+        "Bolan Su",
+        "Ying-cong Chen"
       ],
       "year": 2026,
       "venue": "arXiv preprint arXiv:2601.03655",
-      "citations": 0,
+      "citations": 17,
       "url": "https://arxiv.org/abs/2601.03655",
-      "id": "",
-      "scholar_url": "",
-      "abstract": ""
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:9yKSN-GCB0IC",
+      "abstract": "Maintaining consistent characters, props, and environments across multiple shots is a central challenge in narrative video generation. Existing models can produce high-quality short clips but often fail to preserve entity identity and appearance when scenes change or when entities reappear after long temporal gaps. We present VideoMemory, an entity-centric framework that integrates narrative planning with visual generation through a Dynamic Memory Bank. Given a structured script, a multi-agent system decomposes the narrative into shots, retrieves entity representations from memory, and synthesizes keyframes and videos conditioned on these retrieved states. The Dynamic Memory Bank stores explicit visual and semantic descriptors for characters, props, and backgrounds, and is updated after each shot to reflect story-driven changes while preserving identity. This retrieval-update mechanism enables consistent portrayal of entities across distant shots and supports coherent long-form generation. To evaluate this setting, we construct a 54-case multi-shot consistency benchmark covering character-, prop-, and background-persistent scenarios. Extensive experiments show that VideoMemory achieves strong entity-level coherence and high perceptual quality across diverse narrative sequences."
     },
     {
-      "title": "ImpText: A Benchmark and Tool-Augmented Framework for Implicit Text Reasoning",
-      "authors": [
-        "Litao Guo",
-        "Jinsong Zhou",
-        "Shuaibo Li",
-        "Man Chen",
-        "Xinli Xu",
-        "Zixin Zhang",
-        "Harold Haodong Chen",
-        "Yingcong Chen"
-      ],
-      "year": 2026,
-      "venue": "International Conference on Machine Learning (ICML)",
-      "citations": 0,
-      "url": "https://icml.cc/virtual/2026/poster/63174",
-      "id": "",
-      "scholar_url": "",
-      "abstract": ""
-    },
-    {
-      "title": "ComfyMind: Toward General-Purpose Generation via Tree-Based Planning and Reactive Feedback",
+      "id": "9GlGW1MAAAAJ:u5HHmVD_uO8C",
+      "title": "Comfymind: Toward general-purpose generation via tree-based planning and reactive feedback",
       "authors": [
         "Litao Guo",
         "Xinli Xu",
@@ -57,13 +44,67 @@
         "Bolan Su",
         "Yingcong Chen"
       ],
-      "year": 2025,
-      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
-      "citations": 0,
+      "year": 2026,
+      "venue": "Advances in Neural Information Processing Systems",
+      "citations": 16,
       "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html",
-      "id": "",
-      "scholar_url": "",
-      "abstract": ""
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u5HHmVD_uO8C",
+      "abstract": "With the rapid advancement of generative models, general-purpose generation has gained increasing attention as a promising approach to unify diverse tasks across modalities within a single system. Despite this progress, existing open-source frameworks often remain fragile and struggle to support complex real-world applications due to the lack of structured workflow planning and execution-level feedback. To address these limitations, we present ComfyMind, a collaborative AI system designed to enable robust and scalable general-purpose generation, built on the ComfyUI platform. ComfyMind introduces two core innovations: Semantic Workflow Interface (SWI) that abstracts low-level node graphs into callable functional modules described in natural language, enabling high-level composition and reducing structural errors; Search Tree Planning mechanism with localized feedback execution, which models generation as a hierarchical decision process and allows adaptive correction at each stage. Together, these components improve the stability and flexibility of complex generative workflows. We evaluate ComfyMind on three public benchmarks: ComfyBench, GenEval, and Reason-Edit, which span generation, editing, and reasoning tasks. Results show that ComfyMind consistently outperforms existing open-source baselines and achieves performance comparable to GPT-Image-1. ComfyMind paves a promising path for the development of open-source general-purpose generative AI systems."
+    },
+    {
+      "id": "9GlGW1MAAAAJ:2osOgNQ5qMEC",
+      "title": "ImpText: A Benchmark and Tool-Augmented Framework for Implicit Text Reasoning",
+      "authors": [
+        "Litao Guo",
+        "Jinsong Zhou",
+        "Shuaibo Li",
+        "Man CHEN",
+        "Xinli Xu",
+        "Zixin Zhang",
+        "Harold Haodong Chen",
+        "Ying-Cong Chen"
+      ],
+      "year": 2026,
+      "venue": "Forty-third International Conference on Machine Learning",
+      "citations": 0,
+      "url": "https://openreview.net/forum?id=ZPJRm2K3oe",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:2osOgNQ5qMEC",
+      "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated exceptional proficiency in standard text extraction, but they encounter significant challenges when confronting real-world implicit text. Such content typically contains malicious information, intentionally concealed through physical deformation, visual camouflage, or cognitive suggestion. These concealment techniques circumvent content moderation systems and pose severe risks to user safety. To bridge the research gap in text recognition under real-world adversarial scenarios, we define the task of Implicit Text Reasoning and introduce ImpText-Bench, a meticulously constructed benchmark. Extensive evaluations on this benchmark reveal significant vulnerability in current systems; even advanced proprietary models achieve a maximum Text Match Score of only 35.79\\%. In response, we propose ImpText-Reader, a tool-augmented framework. It employs a three-stage training strategy utilizing capability-boundary data to collaboratively optimize tool selection and semantic reasoning, thereby effectively extracting hidden text. Extensive experiments demonstrate that our approach achieves SOTA performance, significantly enhancing model robustness in adversarial environments."
+    },
+    {
+      "id": "9GlGW1MAAAAJ:u-x6o8ySG0sC",
+      "title": "Large language models for transforming healthcare: a perspective on DeepSeek‐R1",
+      "authors": [
+        "Jinsong Zhou",
+        "Yuhan Cheng",
+        "Sixu He",
+        "Yingcong Chen",
+        "Hao Chen"
+      ],
+      "year": 2025,
+      "venue": "MedComm–Future Medicine",
+      "citations": 13,
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mef2.70021",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u-x6o8ySG0sC",
+      "abstract": "DeepSeek‐R1 is an open‐source Large Language Model (LLM) with advanced reasoning capabilities. It has gained significant attention for its impressive advantages including low costs and visualized reasoning steps. Recent advancements in reasoning LLMs like ChatGPT‐o1 have significantly exhibited their considerable reasoning potential, but the closed‐source nature of existing models limits customization and transparency, presenting substantial barriers to their integration into healthcare systems. This gap motivates the exploration of DeepSeek‐R1 in the medical field. Thus, we comprehensively review the transformative potential, applications, and challenges of DeepSeek‐R1 in healthcare. Specifically, we investigate how DeepSeek‐R1 can enhance clinical decision support, patient engagement, and medical education to help for clinic, outpatient and medical research. Furthermore, we critically evaluate …"
+    },
+    {
+      "id": "9GlGW1MAAAAJ:d1gkVwhDpl0C",
+      "title": "Presentcoach: Dual-agent presentation coaching through exemplars and interactive feedback",
+      "authors": [
+        "Sirui Chen",
+        "Jinsong Zhou",
+        "Xinli Xu",
+        "Xiaoyu Yang",
+        "Litao Guo",
+        "Ying-Cong Chen"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2511.15253",
+      "citations": 7,
+      "url": "https://arxiv.org/abs/2511.15253",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:d1gkVwhDpl0C",
+      "abstract": "Effective presentation skills are essential in education, professional communication, and public speaking, yet learners often lack access to high-quality exemplars or personalized coaching. Existing AI tools typically provide isolated functionalities such as speech scoring or script generation without integrating reference modeling and interactive feedback into a cohesive learning experience. We introduce a dual-agent system that supports presentation practice through two complementary roles: the Ideal Presentation Agent and the Coach Agent. The Ideal Presentation Agent converts user-provided slides into model presentation videos by combining slide processing, visual-language analysis, narration script generation, personalized voice synthesis, and synchronized video assembly. The Coach Agent then evaluates user-recorded presentations against these exemplars, conducting multimodal speech analysis and delivering structured feedback in an Observation-Impact-Suggestion (OIS) format. To enhance the authenticity of the learning experience, the Coach Agent incorporates an Audience Agent, which simulates the perspective of a human listener and provides humanized feedback reflecting audience reactions and engagement. Together, these agents form a closed loop of observation, practice, and feedback. Implemented on a robust backend with multi-model integration, voice cloning, and error handling mechanisms, the system demonstrates how AI-driven agents can provide engaging, human-centered, and scalable support for presentation skill development in both educational and professional contexts."
     }
   ]
 }
