@@ -1,0 +1,150 @@
+# ---------------------------------------------------------------------------
+# All homepage content lives here. Edit this file to update the site;
+# the layout in _layouts/home.html renders it.
+# Inline Markdown (links, **bold**, *italic*) is allowed in text fields.
+# ---------------------------------------------------------------------------
+
+hero:
+  name: "Jinsong Zhou"
+  name_zh: "周劲松"
+  tagline: "Ph.D. candidate in Artificial Intelligence at HKUST(GZ)."
+  subline: "Building AI agents and multimodal generative systems."
+  buttons:
+    - label: "Email"
+      url: "mailto:jinsongzhou14@gmail.com"
+      style: "primary"
+    - label: "GitHub"
+      url: "https://github.com/Jinsong-Zhou"
+      style: "secondary"
+
+about:
+  heading: "About me"
+  lead: "AI agents, multimodal reasoning, and generative systems."
+  body: >-
+    Jinsong Zhou (周劲松) is a Ph.D. candidate in Artificial Intelligence at the
+    [AI Thrust, Information Hub](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/information-hub/)
+    of [The Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn),
+    advised by [Prof. Yingcong Chen](https://envision-research.hkust-gz.edu.cn).
+    My work focuses on AI agents, multimodal reasoning, and generative systems.
+    I am currently an AI Agent Solution Architect Intern at NVIDIA. Previously, I co-founded
+    [StoryVerse](https://storyverseai.art/) and worked as a Risk Control Algorithm Intern at ByteDance.
+    I received my B.S. in Statistics from
+    [Southern University of Science and Technology](https://www.sustech.edu.cn/en/).
+  facts:
+    - label: "Currently"
+      value: "AI Agent Solution Architect Intern, NVIDIA"
+    - label: "Based in"
+      value: "Guangzhou, China"
+    - label: "Advisor"
+      value: "[Prof. Yingcong Chen](https://envision-research.hkust-gz.edu.cn)"
+
+experiences:
+  heading: "Experiences"
+  lead: "From research labs to startups to industry."
+  items:
+    - org: "NVIDIA"
+      role: "AI Agent Solution Architect Intern"
+      period: "May 2026 – Present"
+      current: true
+      bullets:
+        - "Built cross-platform Agent Harnesses for expert workflows across DevRel, robotics, and AI coding agents."
+        - "Packaged repetitive NVIDIA DevRel workflows into 10 installable Agent Skills and delivered an internal Harness compatible with Codex, Claude Code, Cursor, and other major coding agents."
+        - "Converted expert-operated Sim2Real workflows—including data import, robot modeling, simulation tuning, validation, and configuration export—into a reproducible human-in-the-loop Agent Harness."
+        - "Built NIMHub, a reliable NVIDIA model integration layer supporting natural-language discovery, selection, multi-model composition, and code generation across 208 Build/NIM models, with direct invocation code for 163 models."
+    - org: "StoryVerse"
+      url: "https://storyverseai.art/"
+      role: "Co-Founder"
+      period: "Aug 2025 – Mar 2026"
+      bullets:
+        - "Co-founded an AI-native New Hollywood studio delivering end-to-end cinematic production for global audiences."
+        - "Helped close a $1M angel round at a $10M valuation."
+        - "Built and led a six-person cross-functional team across product, UI/UX, frontend, backend, and machine learning; productized the multi-agent cinematic pipeline and launched the Beta, supporting 1,000+ concurrent users."
+    - org: "ByteDance, Douyin"
+      role: "Risk Control Algorithm Intern"
+      period: "May 2025 – Dec 2025"
+      bullets:
+        - "Built a LangGraph-based multi-agent risk assessment system from scratch, orchestrating 30+ MCP Tools to aggregate multi-dimensional user data for autonomous violation detection and explainable evidence generation."
+        - "Built an adversarial image synthesis engine and 3,000+ Function Tool call-chain samples; trained Qwen3-VL-8B with SFT and GRPO to jointly optimize tool selection and semantic reasoning, producing ImpText-Reader and the ICML 2026 paper ImpText."
+
+publications:
+  heading: "Publications"
+  lead: "Video generation, implicit text reasoning, and general-purpose generation."
+  items:
+    - title: "VideoMemory: Toward Consistent Video Generation via Memory Integration"
+      url: "https://arxiv.org/abs/2601.03655"
+      authors: "**Jinsong Zhou**, Yihua Du, Xinli Xu, Yingcong Chen"
+      venue: "arXiv"
+      year: "2026"
+      note: "arXiv:2601.03655 · AAAI 2027 under review"
+    - title: "ImpText: A Benchmark and Tool-Augmented Framework for Implicit Text Reasoning"
+      url: "https://icml.cc/virtual/2026/poster/63174"
+      authors: "Litao Guo, **Jinsong Zhou**, Shuaibo Li, Man Chen, Xinli Xu, Zixin Zhang, Harold Haodong Chen, Yingcong Chen"
+      venue: "ICML"
+      year: "2026"
+    - title: "ComfyMind: Toward General-Purpose Generation via Tree-Based Planning and Reactive Feedback"
+      url: "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html"
+      authors: "Litao Guo, Xinli Xu, Luozhou Wang, Jiantao Lin, **Jinsong Zhou**, Zixin Zhang, Bolan Su, Yingcong Chen"
+      venue: "NeurIPS"
+      year: "2025"
+
+open_source:
+  heading: "Open Source"
+  lead: "Plugins for the DeepSeek Harness."
+  items:
+    - name: "safe-find-dsh-plugins"
+      url: "https://github.com/Jinsong-Zhou/safe-find-dsh-plugins"
+      description: "A DeepSeek Harness plugin that discovers task-relevant plugins and runs a security scan before installation."
+    - name: "dsh-html-canvas"
+      url: "https://github.com/Jinsong-Zhou/dsh-html-canvas"
+      description: "A DeepSeek Harness plugin that turns AI-generated HTML into a click-to-edit canvas beside the chat."
+
+educations:
+  heading: "Education"
+  items:
+    - degree: "Ph.D. in Artificial Intelligence"
+      school: "HKUST(GZ)"
+      url: "https://www.hkust-gz.edu.cn"
+      location: "China"
+      period: "Sep 2024 – Present"
+    - degree: "B.S. in Statistics"
+      school: "SUSTech"
+      url: "https://www.sustech.edu.cn/en/"
+      location: "China"
+      period: "Sep 2020 – Jul 2024"
+    - degree: "Exchange Student"
+      school: "University of California, Irvine"
+      url: "https://uci.edu/"
+      location: "United States"
+      period: "Mar 2023 – Jul 2023"
+
+honors:
+  heading: "Honors & Awards"
+  items:
+    - title: "Full Postgraduate Scholarship"
+      by: "HKUST(GZ)"
+      date: "Sep 2024"
+    - title: "First-Class Outstanding Student Scholarship (Top 5%)"
+      by: "SUSTech"
+      date: "Oct 2023"
+    - title: "Study Abroad Scholarship (¥80,000)"
+      by: "SUSTech"
+      date: "Dec 2022"
+
+skills:
+  heading: "Skills"
+  groups:
+    - name: "Coding Agents"
+      items: ["Claude Code", "Codex", "Cursor", "DeepSeek Harness"]
+    - name: "Programming"
+      items: ["Python", "LangChain", "LangGraph", "DeepAgents"]
+    - name: "Languages"
+      items: ["English (Fluent, IELTS 7.0)", "Mandarin (Native)"]
+
+footer:
+  links:
+    - label: "Email"
+      url: "mailto:jinsongzhou14@gmail.com"
+    - label: "GitHub"
+      url: "https://github.com/Jinsong-Zhou"
+    - label: "HKUST(GZ)"
+      url: "https://www.hkust-gz.edu.cn"
