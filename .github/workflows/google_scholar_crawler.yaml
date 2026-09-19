@@ -20,6 +20,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -34,6 +35,9 @@ jobs:
         env:
           # Override in Settings -> Secrets and variables -> Actions -> Variables
           GOOGLE_SCHOLAR_ID: ${{ vars.GOOGLE_SCHOLAR_ID || '9GlGW1MAAAAJ' }}
+          # Google Scholar blocks GitHub's IPs; a free ScraperAPI key makes the
+          # sync reliable. Add it in Settings -> Secrets and variables -> Actions.
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
         run: python google_scholar_crawler/main.py
 
       - name: Commit updated data

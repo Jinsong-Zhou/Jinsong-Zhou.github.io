@@ -49,6 +49,12 @@ from `_data/scholar.json`. The GitHub Action in
 GitHub Pages then rebuilds the site, so new papers and citation counts show
 up automatically.
 
+- Google Scholar blocks GitHub Actions' IP addresses, so the sync needs a
+  proxy. Create a free account at <https://www.scraperapi.com>, copy the API
+  key, and add it as a repository secret named `SCRAPERAPI_KEY`
+  (Settings → Secrets and variables → Actions → New repository secret).
+  Without it the script still tries a direct connection and free proxies,
+  which only work occasionally.
 - To point at another profile, set a repository variable `GOOGLE_SCHOLAR_ID`
   (Settings → Secrets and variables → Actions → Variables).
 - To fix a venue name, link, or add a note for a paper, add an entry under

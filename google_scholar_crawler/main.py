@@ -12,9 +12,13 @@ import re
 import sys
 from datetime import datetime, timezone
 
-from scholarly import scholarly
+from scholarly import ProxyGenerator, scholarly
 
 SCHOLAR_ID = os.environ.get("GOOGLE_SCHOLAR_ID", "9GlGW1MAAAAJ")
+# Google Scholar blocks most data-centre IPs (including GitHub Actions), so a
+# proxy is usually required. Set SCRAPERAPI_KEY (free tier is enough) as a
+# repository secret for a reliable sync; otherwise we fall back to free proxies.
+SCRAPERAPI_KEY = os.environ.get("SCRAPERAPI_KEY", "").strip()
 OUT_PATH = os.environ.get(
     "SCHOLAR_OUT", os.path.join(os.path.dirname(__file__), "..", "_data", "scholar.json")
 )
@@ -43,9 +47,60 @@ def year_of(bib: dict):
         return None
 
 
+def strategies():
+    """Yield (name, setup) pairs; setup() configures scholarly and returns bool."""
+    if SCRAPERAPI_KEY:
+        def scraperapi():
+            pg = ProxyGenerator()
+            if not pg.ScraperAPI(SCRAPERAPI_KEY):
+                return False
+            scholarly.use_proxy(pg, pg)
+            scholarly.set_retries(3)
+            return True
+        yield "ScraperAPI", scraperapi
+
+    def direct():
+        scholarly.use_proxy(None, None)
+        scholarly.set_timeout(20)
+        scholarly.set_retries(2)  # fail fast; the default retries take ~15 min
+        return True
+    yield "direct connection", direct
+
+    def free_proxies():
+        pg = ProxyGenerator()
+        if not pg.FreeProxies(timeout=2, wait_time=180):
+            return False
+        scholarly.use_proxy(pg, pg)
+        scholarly.set_timeout(20)
+        scholarly.set_retries(4)
+        return True
+    yield "free proxies", free_proxies
+
+
+def fetch_author() -> dict:
+    last_error = None
+    for name, setup in strategies():
+        try:
+            print(f"trying {name} ...", file=sys.stderr)
+            if not setup():
+                print(f"{name}: proxy setup failed, skipping", file=sys.stderr)
+                continue
+            author = scholarly.search_author_id(SCHOLAR_ID)
+            scholarly.fill(author, sections=["basics", "indices", "counts", "publications"])
+            print(f"{name}: fetched profile", file=sys.stderr)
+            return author
+        except Exception as exc:
+            last_error = exc
+            print(f"{name}: failed ({exc})", file=sys.stderr)
+    raise RuntimeError(f"all strategies failed; last error: {last_error}")
+
+
 def main() -> int:
-    author = scholarly.search_author_id(SCHOLAR_ID)
-    scholarly.fill(author, sections=["basics", "indices", "counts", "publications"])
+    try:
+        author = fetch_author()
+    except Exception as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
 
     pubs = []
     for pub in author.get("publications", []):
