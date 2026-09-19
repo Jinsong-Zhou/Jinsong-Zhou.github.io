@@ -40,18 +40,25 @@ Then open <http://localhost:4000>.
 
 ## Visitor map
 
-The homepage ends with a "Visitors" section: a world map from
-[ClustrMaps](https://clustrmaps.com/) that shows where readers come from,
-with today's visitors highlighted. GitHub Pages is static and cannot count
-visitors itself, so the map is a third-party widget and needs an account:
+The homepage ends with a "Visitors" section: a world map that shows where
+readers come from, with today's visitors highlighted. GitHub Pages is static
+and cannot count visitors itself, so the map is a third-party widget and
+needs a free account with one of two interchangeable providers:
 
-1. Sign up at <https://clustrmaps.com/> and register `https://jinsong-zhou.github.io`.
-2. In the embed code ClustrMaps gives you, copy the id after `map_v2.js?d=`.
-3. Put it in `_config.yml` as `clustrmaps_id`. The section text lives under
-   `visitors` in `_data/profile.yml`.
+- [ClustrMaps](https://clustrmaps.com/) (`provider: clustrmaps`)
+- [MapMyVisitors](https://mapmyvisitors.com/) (`provider: mapmyvisitors`),
+  a sister service with the same embed format; use it if ClustrMaps is
+  unreachable from your network.
 
-Leave `clustrmaps_id` empty and the section is not rendered at all. The
-markup and colors are in `_includes/visitor_map.html`.
+1. Sign up and register `https://jinsong-zhou.github.io`.
+2. In the embed code you get, copy the id after `d=`.
+3. Put it in `_config.yml` under `visitor_map.id` and set `visitor_map.provider`.
+   The section text lives under `visitors` in `_data/profile.yml`.
+
+Leave `visitor_map.id` empty and the section is not rendered at all. If a
+visitor's browser cannot load the map (blocked network, provider outage),
+the section hides itself so no empty card is shown. Markup and colors are in
+`_includes/visitor_map.html`.
 
 ## Publications synced from Google Scholar
 

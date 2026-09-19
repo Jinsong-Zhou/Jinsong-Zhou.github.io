@@ -16,11 +16,16 @@ google_scholar_stats_use_cdn : true
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
 
-# visitor map (ClustrMaps widget in the "Visitors" section of the homepage)
-# 1. Sign up at https://clustrmaps.com/ with this site's URL.
-# 2. Copy the id from the embed code (the value after "map_v2.js?d=").
-# 3. Paste it below. Leave it empty to hide the section entirely.
-clustrmaps_id            :
+# visitor map (world map of visitors in the "Visitors" section of the homepage)
+# Two interchangeable providers are supported; both are free and use the same
+# kind of embed code. Sign up with this site's URL, then copy the id from the
+# embed code (the value after "d=") into visitor_map.id.
+#   clustrmaps    -> https://clustrmaps.com/
+#   mapmyvisitors -> https://mapmyvisitors.com/
+# Leave id empty to hide the section entirely.
+visitor_map:
+  provider               : clustrmaps
+  id                     :
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
