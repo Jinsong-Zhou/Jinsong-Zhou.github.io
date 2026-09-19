@@ -10,6 +10,7 @@ with a matching override from _data/profile.yml (matched by title).
   {%- if okey == key -%}{%- assign ov = o -%}{%- endif -%}
 {%- endfor -%}
 {%- assign url = ov.url | default: pub.url | default: pub.scholar_url | default: site.data.scholar.profile_url -%}
+{%- assign title = ov.title | default: pub.title -%}
 {%- assign venue = ov.venue | default: pub.venue -%}
 {%- assign authors = pub.authors -%}
 {%- if ov.authors -%}{%- assign authors = ov.authors -%}{%- elsif authors.size == 0 -%}{%- assign authors = "" | split: "" -%}{%- endif -%}
@@ -22,7 +23,7 @@ with a matching override from _data/profile.yml (matched by title).
     <span class="venue__year">{{ pub.year }}</span>
   </div>
   <div class="card__body">
-    <h3 class="card__title"><a href="{{ url }}">{{ pub.title }}</a></h3>
+    <h3 class="card__title"><a href="{{ url }}">{{ title }}</a></h3>
     <p class="card__authors">
       {%- for a in authors -%}
         {%- assign al = a | downcase | strip -%}
