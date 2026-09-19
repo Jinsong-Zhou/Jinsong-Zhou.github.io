@@ -24,7 +24,7 @@ supported in text fields. The navigation links are in
 | `_includes/publication.html` | One publication card (shared by homepage and publications page) |
 | `_layouts/home.html` | Renders the content into sections |
 | `_layouts/default.html` | HTML shell (head, nav, footer) |
-| `_includes/` | `head`, `nav`, `footer`, `icons`, `seo` partials |
+| `_includes/` | `head`, `nav`, `footer`, `icons`, `seo`, `visitor_map` partials |
 | `assets/css/site.css` | Design system and all styles |
 | `assets/js/site.js` | Mobile menu, scroll spy, reveal animation |
 | `images/` | Avatar and favicons |
@@ -37,6 +37,30 @@ bundle exec jekyll serve
 ```
 
 Then open <http://localhost:4000>.
+
+## Visitor map
+
+The homepage ends with a "Visitors" section: a world map that shows where
+readers come from, with today's visitors highlighted. GitHub Pages is static
+and cannot count visitors itself, so the map is a third-party widget and
+needs a free account with one of two interchangeable providers:
+
+- [ClustrMaps](https://clustrmaps.com/) (`provider: clustrmaps`)
+- [MapMyVisitors](https://mapmyvisitors.com/) (`provider: mapmyvisitors`),
+  a sister service with the same embed format; use it if ClustrMaps is
+  unreachable from your network.
+
+1. Sign up and register `https://jinsong-zhou.github.io`.
+2. In the embed code you get, copy the id after `d=`.
+3. Put it in `_config.yml` under `visitor_map.id` and set `visitor_map.provider`.
+   `visitor_map.page` is the public stats page link from the dashboard, used
+   for the "Powered by" link. The section text lives under `visitors` in
+   `_data/profile.yml`.
+
+Leave `visitor_map.id` empty and the section is not rendered at all. If a
+visitor's browser cannot load the map (blocked network, provider outage),
+the section hides itself so no empty card is shown. Markup and colors are in
+`_includes/visitor_map.html`.
 
 ## Publications synced from Google Scholar
 
