@@ -1,0 +1,69 @@
+{
+  "scholar_id": "9GlGW1MAAAAJ",
+  "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
+  "name": "Jinsong Zhou",
+  "affiliation": "HKUST(GZ)",
+  "citedby": 0,
+  "citedby5y": 0,
+  "hindex": 0,
+  "i10index": 0,
+  "updated": "",
+  "publications": [
+    {
+      "title": "VideoMemory: Toward Consistent Video Generation via Memory Integration",
+      "authors": [
+        "Jinsong Zhou",
+        "Yihua Du",
+        "Xinli Xu",
+        "Yingcong Chen"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2601.03655",
+      "citations": 0,
+      "url": "https://arxiv.org/abs/2601.03655",
+      "id": "",
+      "scholar_url": "",
+      "abstract": ""
+    },
+    {
+      "title": "ImpText: A Benchmark and Tool-Augmented Framework for Implicit Text Reasoning",
+      "authors": [
+        "Litao Guo",
+        "Jinsong Zhou",
+        "Shuaibo Li",
+        "Man Chen",
+        "Xinli Xu",
+        "Zixin Zhang",
+        "Harold Haodong Chen",
+        "Yingcong Chen"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Machine Learning (ICML)",
+      "citations": 0,
+      "url": "https://icml.cc/virtual/2026/poster/63174",
+      "id": "",
+      "scholar_url": "",
+      "abstract": ""
+    },
+    {
+      "title": "ComfyMind: Toward General-Purpose Generation via Tree-Based Planning and Reactive Feedback",
+      "authors": [
+        "Litao Guo",
+        "Xinli Xu",
+        "Luozhou Wang",
+        "Jiantao Lin",
+        "Jinsong Zhou",
+        "Zixin Zhang",
+        "Bolan Su",
+        "Yingcong Chen"
+      ],
+      "year": 2025,
+      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+      "citations": 0,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html",
+      "id": "",
+      "scholar_url": "",
+      "abstract": ""
+    }
+  ]
+}

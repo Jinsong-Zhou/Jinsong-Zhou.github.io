@@ -18,7 +18,10 @@ supported in text fields. The navigation links are in
 
 | Path | Purpose |
 | --- | --- |
-| `_data/profile.yml` | All homepage content |
+| `_data/profile.yml` | All homepage content (plus per-paper overrides) |
+| `_data/scholar.json` | Publications and citation stats, auto-synced from Google Scholar |
+| `_pages/publications.md` + `_layouts/publications.html` | Standalone publications page |
+| `_includes/publication.html` | One publication card (shared by homepage and publications page) |
 | `_layouts/home.html` | Renders the content into sections |
 | `_layouts/default.html` | HTML shell (head, nav, footer) |
 | `_includes/` | `head`, `nav`, `footer`, `icons`, `seo` partials |
@@ -35,8 +38,20 @@ bundle exec jekyll serve
 
 Then open <http://localhost:4000>.
 
-## Google Scholar citations
+## Publications synced from Google Scholar
 
-`google_scholar_crawler/` and the GitHub Action in `.github/workflows/` still
-fetch citation data into the `google-scholar-stats` branch on a schedule; the
-homepage does not currently display it.
+The publications page (`/publications/`) and the homepage teaser are rendered
+from `_data/scholar.json`. The GitHub Action in
+`.github/workflows/google_scholar_crawler.yaml` runs
+`google_scholar_crawler/main.py` every day (and on demand via
+"Run workflow"), fetches the Google Scholar profile
+`9GlGW1MAAAAJ`, and commits the file back to `main` when anything changed.
+GitHub Pages then rebuilds the site, so new papers and citation counts show
+up automatically.
+
+- To point at another profile, set a repository variable `GOOGLE_SCHOLAR_ID`
+  (Settings → Secrets and variables → Actions → Variables).
+- To fix a venue name, link, or add a note for a paper, add an entry under
+  `publications.overrides` in `_data/profile.yml`; it is matched by title.
+- To sync locally: `pip install -r google_scholar_crawler/requirements.txt`
+  then `python google_scholar_crawler/main.py`.

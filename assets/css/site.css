@@ -684,6 +684,93 @@ strong { font-weight: 600; }
   .skills__name { padding-top: 0; }
 }
 
+/* ---------- Publications ---------- */
+
+.page-hero {
+  padding: 72px 22px 56px;
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgba(0, 113, 227, 0.08), transparent 70%),
+    var(--bg);
+}
+.eyebrow {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.section__header--row {
+  max-width: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+.section__header--row > div { max-width: 720px; }
+.section__header--row .btn { flex: none; margin-bottom: 4px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+.stats__item {
+  padding: 18px 20px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+.stats__item dt {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.stats__item dd {
+  margin: 4px 0 0;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+.stats__source {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-3);
+}
+.stats__source .link { margin-left: 6px; font-size: 13px; }
+
+.year-group + .year-group { margin-top: 48px; }
+.year-group__title {
+  margin-bottom: 16px;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-2);
+}
+
+.pub__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  margin-top: 14px;
+}
+.pub__actions .link { margin-top: 0; }
+.link--muted { color: var(--text-2); }
+.pub__cites { padding: 3px 10px; font-size: 12px; }
+
+@media (max-width: 733px) {
+  .page-hero { padding: 48px 16px 40px; }
+  .section__header--row { flex-direction: column; align-items: flex-start; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats__item dd { font-size: 26px; }
+}
+
 /* ---------- Footer ---------- */
 
 .footer {

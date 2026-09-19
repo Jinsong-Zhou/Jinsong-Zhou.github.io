@@ -28,9 +28,16 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   // Highlight the section currently in view
-  var links = Array.prototype.slice.call(document.querySelectorAll('.nav__menu a[href^="#"]'));
+  // Section id a nav link refers to: "/#about" -> "about", "/publications/" -> "publications"
+  var hashOf = function (a) {
+    var href = a.getAttribute('href');
+    var i = href.indexOf('#');
+    if (i !== -1) return href.slice(i + 1);
+    return href.replace(/\/+$/, '').split('/').pop();
+  };
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav__menu a'));
   var sections = links
-    .map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); })
+    .map(function (a) { return document.getElementById(hashOf(a)); })
     .filter(Boolean);
 
   if ('IntersectionObserver' in window && sections.length) {
@@ -40,7 +47,7 @@
         if (entry.isIntersecting) current = entry.target.id;
       });
       links.forEach(function (a) {
-        a.classList.toggle('is-active', a.getAttribute('href') === '#' + current);
+        a.classList.toggle('is-active', hashOf(a) === current);
       });
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(function (s) { spy.observe(s); });
