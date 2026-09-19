@@ -53,7 +53,9 @@ needs a free account with one of two interchangeable providers:
 1. Sign up and register `https://jinsong-zhou.github.io`.
 2. In the embed code you get, copy the id after `d=`.
 3. Put it in `_config.yml` under `visitor_map.id` and set `visitor_map.provider`.
-   The section text lives under `visitors` in `_data/profile.yml`.
+   `visitor_map.page` is the public stats page link from the dashboard, used
+   for the "Powered by" link. The section text lives under `visitors` in
+   `_data/profile.yml`.
 
 Leave `visitor_map.id` empty and the section is not rendered at all. If a
 visitor's browser cannot load the map (blocked network, provider outage),

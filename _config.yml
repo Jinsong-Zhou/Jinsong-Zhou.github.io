@@ -22,10 +22,13 @@ google_analytics_id      :  # get google_analytics_id from https://analytics.goo
 # embed code (the value after "d=") into visitor_map.id.
 #   clustrmaps    -> https://clustrmaps.com/
 #   mapmyvisitors -> https://mapmyvisitors.com/
+# page is the public stats page (the "/web/xxxx" or "/site/xxxx" link on
+# the provider's dashboard); it is only used for the "Powered by" link.
 # Leave id empty to hide the section entirely.
 visitor_map:
   provider               : mapmyvisitors
-  id                     :
+  id                     : "5WNQdcFn1Y7Umk6iwZnL4_EOrXQy-bPbY1ahscGRsyc"
+  page                   : "https://mapmyvisitors.com/web/1c8c3"
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about

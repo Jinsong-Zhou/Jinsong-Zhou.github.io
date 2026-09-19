@@ -13,12 +13,12 @@ whole section hides itself instead of showing an empty card.
 {%- if vm.provider == "mapmyvisitors" -%}
   {%- assign vm_script_id = "mapmyvisitors" -%}
   {%- assign vm_script = "https://mapmyvisitors.com/map.js" -%}
-  {%- assign vm_site = "https://mapmyvisitors.com/web/" | append: vm.id -%}
+  {%- assign vm_site = vm.page | default: "https://mapmyvisitors.com/" -%}
   {%- assign vm_name = "MapMyVisitors" -%}
 {%- else -%}
   {%- assign vm_script_id = "clustrmaps" -%}
   {%- assign vm_script = "https://clustrmaps.com/map_v2.js" -%}
-  {%- assign vm_site = "https://clustrmaps.com/site/" | append: vm.id -%}
+  {%- assign vm_site = vm.page | default: "https://clustrmaps.com/" -%}
   {%- assign vm_name = "ClustrMaps" -%}
 {%- endif -%}
 <section class="section" id="visitors">
