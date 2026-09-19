@@ -49,6 +49,14 @@ def year_of(bib: dict):
 
 def strategies():
     """Yield (name, setup) pairs; setup() configures scholarly and returns bool."""
+
+    def direct():
+        scholarly.use_proxy(None, None)
+        scholarly.set_timeout(20)
+        scholarly.set_retries(3)
+        return True
+    yield "direct connection", direct
+
     if SCRAPERAPI_KEY:
         def scraperapi():
             pg = ProxyGenerator()
@@ -58,13 +66,6 @@ def strategies():
             scholarly.set_retries(3)
             return True
         yield "ScraperAPI", scraperapi
-
-    def direct():
-        scholarly.use_proxy(None, None)
-        scholarly.set_timeout(20)
-        scholarly.set_retries(2)  # fail fast; the default retries take ~15 min
-        return True
-    yield "direct connection", direct
 
     def free_proxies():
         pg = ProxyGenerator()
@@ -95,6 +96,22 @@ def fetch_author() -> dict:
     raise RuntimeError(f"all strategies failed; last error: {last_error}")
 
 
+def load_previous() -> dict:
+    """Previously synced publications, keyed by id and by lower-cased title."""
+    try:
+        with open(OUT_PATH, encoding="utf-8") as f:
+            prev = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    index = {}
+    for p in prev.get("publications", []):
+        if p.get("id"):
+            index[p["id"]] = p
+        if p.get("title"):
+            index[p["title"].strip().lower()] = p
+    return index
+
+
 def main() -> int:
     try:
         author = fetch_author()
@@ -102,29 +119,36 @@ def main() -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 1
 
+    previous = load_previous()
     pubs = []
     for pub in author.get("publications", []):
+        filled = True
         try:
             scholarly.fill(pub)
         except Exception as exc:  # keep going with the summary data
+            filled = False
             print(f"warning: could not fill '{pub.get('bib', {}).get('title')}': {exc}", file=sys.stderr)
         bib = pub.get("bib", {})
+        title = bib.get("title", "").strip()
+        old = previous.get(pub.get("author_pub_id", "")) or previous.get(title.lower()) or {}
+        authors = clean_authors(bib.get("author", "")) if filled else []
+        venue = venue_of(bib) or bib.get("citation", "").rsplit(",", 1)[0].strip()
         pubs.append(
             {
                 "id": pub.get("author_pub_id", ""),
-                "title": bib.get("title", "").strip(),
-                "authors": clean_authors(bib.get("author", "")),
-                "year": year_of(bib),
-                "venue": venue_of(bib),
+                "title": title,
+                "authors": authors or old.get("authors", []),
+                "year": year_of(bib) or old.get("year"),
+                "venue": venue or old.get("venue", ""),
                 "citations": int(pub.get("num_citations") or 0),
-                "url": pub.get("pub_url") or "",
+                "url": pub.get("pub_url") or old.get("url", ""),
                 "scholar_url": (
                     f"https://scholar.google.com/citations?view_op=view_citation&hl=en"
                     f"&user={SCHOLAR_ID}&citation_for_view={pub.get('author_pub_id', '')}"
                     if pub.get("author_pub_id")
                     else ""
                 ),
-                "abstract": (bib.get("abstract") or "").strip(),
+                "abstract": (bib.get("abstract") or "").strip() or old.get("abstract", ""),
             }
         )
 
