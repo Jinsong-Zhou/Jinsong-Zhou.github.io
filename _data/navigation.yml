@@ -1,16 +1,17 @@
-# Top navigation links (anchor ids match sections in _layouts/home.html)
+# Top navigation links. Hash links point at sections of the homepage;
+# other links are separate pages.
 main:
   - title: "About"
-    url: "#about"
+    url: "/#about"
   - title: "Experiences"
-    url: "#experiences"
+    url: "/#experiences"
   - title: "Publications"
-    url: "#publications"
+    url: "/publications/"
   - title: "Open Source"
-    url: "#open-source"
+    url: "/#open-source"
   - title: "Education"
-    url: "#education"
+    url: "/#education"
   - title: "Honors"
-    url: "#honors"
+    url: "/#honors"
   - title: "Skills"
-    url: "#skills"
+    url: "/#skills"

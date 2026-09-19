@@ -16,6 +16,9 @@ hero:
     - label: "GitHub"
       url: "https://github.com/Jinsong-Zhou"
       style: "secondary"
+    - label: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=9GlGW1MAAAAJ"
+      style: "secondary"
 
 about:
   heading: "About me"
@@ -69,23 +72,20 @@ experiences:
 publications:
   heading: "Publications"
   lead: "Video generation, implicit text reasoning, and general-purpose generation."
-  items:
+  # The list itself is synced from Google Scholar into _data/scholar.json by
+  # .github/workflows/google_scholar_crawler.yaml. Entries below add or fix
+  # details for a paper, matched by (case-insensitive) title.
+  overrides:
     - title: "VideoMemory: Toward Consistent Video Generation via Memory Integration"
       url: "https://arxiv.org/abs/2601.03655"
-      authors: "**Jinsong Zhou**, Yihua Du, Xinli Xu, Yingcong Chen"
       venue: "arXiv"
-      year: "2026"
       note: "arXiv:2601.03655 · AAAI 2027 under review"
     - title: "ImpText: A Benchmark and Tool-Augmented Framework for Implicit Text Reasoning"
       url: "https://icml.cc/virtual/2026/poster/63174"
-      authors: "Litao Guo, **Jinsong Zhou**, Shuaibo Li, Man Chen, Xinli Xu, Zixin Zhang, Harold Haodong Chen, Yingcong Chen"
       venue: "ICML"
-      year: "2026"
     - title: "ComfyMind: Toward General-Purpose Generation via Tree-Based Planning and Reactive Feedback"
       url: "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html"
-      authors: "Litao Guo, Xinli Xu, Luozhou Wang, Jiantao Lin, **Jinsong Zhou**, Zixin Zhang, Bolan Su, Yingcong Chen"
       venue: "NeurIPS"
-      year: "2025"
 
 open_source:
   heading: "Open Source"
@@ -146,5 +146,7 @@ footer:
       url: "mailto:jinsongzhou14@gmail.com"
     - label: "GitHub"
       url: "https://github.com/Jinsong-Zhou"
+    - label: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=9GlGW1MAAAAJ"
     - label: "HKUST(GZ)"
       url: "https://www.hkust-gz.edu.cn"

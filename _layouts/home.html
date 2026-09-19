@@ -70,29 +70,24 @@ layout: default
   </div>
 </section>
 
-<!-- Publications -->
+<!-- Publications (teaser; full list lives at /publications/) -->
+{%- assign gs = site.data.scholar -%}
 <section class="section section--alt" id="publications">
   <div class="section__inner">
-    <header class="section__header reveal">
-      <h2 class="section__title">{{ p.publications.heading }}</h2>
-      <p class="section__lead">{{ p.publications.lead }}</p>
+    <header class="section__header section__header--row reveal">
+      <div>
+        <h2 class="section__title">{{ p.publications.heading }}</h2>
+        <p class="section__lead">{{ p.publications.lead }}</p>
+      </div>
+      <a class="btn btn--secondary" href="{{ '/publications/' | relative_url }}">All publications</a>
     </header>
     <div class="stack">
-      {% for pub in p.publications.items %}
-      <article class="card card--row reveal">
-        <div class="venue" aria-label="{{ pub.venue }} {{ pub.year }}">
-          <span class="venue__name">{{ pub.venue }}</span>
-          <span class="venue__year">{{ pub.year }}</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title"><a href="{{ pub.url }}">{{ pub.title }}</a></h3>
-          <p class="card__authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-          {% if pub.note %}<p class="card__note">{{ pub.note }}</p>{% endif %}
-          <a class="link" href="{{ pub.url }}">Read the paper {% include icons.html name="chevron" %}</a>
-        </div>
-      </article>
-      {% endfor %}
+      {%- for pub in gs.publications limit: 3 -%}{% include publication.html pub=pub %}{%- endfor -%}
     </div>
+    <p class="stats__source reveal">
+      {{ gs.publications | size }} papers{% if gs.updated and gs.updated != "" %} · {{ gs.citedby }} citations{% endif %} · synced from <a href="{{ gs.profile_url }}">Google Scholar</a>.
+      <a class="link" href="{{ '/publications/' | relative_url }}">See all {% include icons.html name="chevron" %}</a>
+    </p>
   </div>
 </section>
 
