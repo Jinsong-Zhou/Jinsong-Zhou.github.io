@@ -910,10 +910,10 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: clamp(26px, 5vh, 56px);
+  gap: clamp(18px, 3.4vh, 40px);
   width: var(--wk-card-w);
   height: 100%;
-  padding: clamp(56px, 11vh, 132px) clamp(40px, 5vw, 76px) clamp(40px, 7vh, 80px);
+  padding: clamp(48px, 8vh, 108px) clamp(40px, 5vw, 76px) clamp(28px, 5vh, 64px);
   /* 去圆角，相邻处以左边框作分隔 */
   border: none;
   border-left: 1px solid var(--line);
@@ -931,7 +931,7 @@ canvas {
   position: relative;
   flex: none;
   align-self: flex-end;
-  width: clamp(160px, 22vw, 240px);
+  width: clamp(140px, 18vw, 210px);
   margin-right: clamp(12px, 6%, 80px);
   aspect-ratio: 3 / 2;
   border-radius: 12px;
@@ -1062,7 +1062,7 @@ canvas {
   justify-content: space-between;
   gap: clamp(16px, 4vw, 64px);
   width: 100%;
-  padding: clamp(14px, 2.2vh, 26px) 0;
+  padding: clamp(10px, 1.5vh, 18px) 0;
   border: none;
   background: none;
   color: inherit;
