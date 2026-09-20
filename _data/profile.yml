@@ -76,6 +76,7 @@ publications:
   # .github/workflows/google_scholar_crawler.yaml. Entries below add or fix
   # details for a paper, matched by (case-insensitive) title. The title given
   # here is also used for display, since Scholar lower-cases many titles.
+  # Supported fields: title, url, venue, year, note, authors.
   overrides:
     - title: "VideoMemory: Toward Consistent Video Generation via Memory Integration"
       url: "https://arxiv.org/abs/2601.03655"
@@ -87,6 +88,7 @@ publications:
     - title: "ComfyMind: Toward General-Purpose Generation via Tree-Based Planning and Reactive Feedback"
       url: "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html"
       venue: "NeurIPS"
+      year: 2025   # Scholar lists it as 2026; the proceedings are NeurIPS 2025
     - title: "PresentCoach: Dual-Agent Presentation Coaching through Exemplars and Interactive Feedback"
       venue: "arXiv"
     - title: "Large language models for transforming healthcare: a perspective on DeepSeek‐R1"
