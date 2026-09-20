@@ -6,6 +6,9 @@ export interface WorkListItem {
   tags?: string[]
   link?: string
   slug?: string
+  authors?: string[]
+  homepage?: string
+  github?: string
 }
 
 export interface WorkGroup {
@@ -31,6 +34,8 @@ export interface WorksLang {
   hint: string
   awardsLabel: string
   visitLabel: string
+  siteLabel: string
+  codeLabel: string
   detailPlaceholder: string
   phImageLabel: string
   phButtonLabel: string
@@ -46,6 +51,9 @@ const pubItems: WorkListItem[] = pubs.map((p) => ({
   tags: p.citations ? [`${p.citations} cites`] : undefined,
   link: p.url || p.scholar_url,
   slug: p.slug,
+  authors: p.authors,
+  homepage: p.homepage,
+  github: p.github,
 }))
 
 export const WORKS: Record<'zh' | 'en', WorksLang> = {
@@ -56,6 +64,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: '继续下滑',
     awardsLabel: '引用',
     visitLabel: '打开链接',
+    siteLabel: '主页',
+    codeLabel: 'GitHub',
     detailPlaceholder: '论文摘要见 Google Scholar。',
     phImageLabel: '图片 / 视频',
     phButtonLabel: '跳转按钮',
@@ -98,6 +108,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: 'Keep scrolling',
     awardsLabel: 'Citations',
     visitLabel: 'Open link',
+    siteLabel: 'Site',
+    codeLabel: 'GitHub',
     detailPlaceholder: 'See Google Scholar for the paper abstract.',
     phImageLabel: 'Image / Video',
     phButtonLabel: 'Link button',
