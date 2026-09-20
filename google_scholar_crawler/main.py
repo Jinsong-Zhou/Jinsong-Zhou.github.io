@@ -1,9 +1,9 @@
-"""Fetch the Google Scholar profile and write it to _data/scholar.json.
+"""Fetch the Google Scholar profile and write it to web/src/data/scholar.json.
 
-The Jekyll site renders the publications page from that file, so re-running
-this script (the GitHub Action does it daily) keeps the homepage in sync with
-Google Scholar. The script exits non-zero on failure so that a broken run
-never overwrites good data.
+The 3D résumé reads publications from that file, so re-running this script
+(the GitHub Action does it daily) keeps the works gallery in sync with Google
+Scholar. The script exits non-zero on failure so that a broken run never
+overwrites good data.
 """
 
 import json
@@ -20,7 +20,8 @@ SCHOLAR_ID = os.environ.get("GOOGLE_SCHOLAR_ID", "9GlGW1MAAAAJ")
 # repository secret for a reliable sync; otherwise we fall back to free proxies.
 SCRAPERAPI_KEY = os.environ.get("SCRAPERAPI_KEY", "").strip()
 OUT_PATH = os.environ.get(
-    "SCHOLAR_OUT", os.path.join(os.path.dirname(__file__), "..", "_data", "scholar.json")
+    "SCHOLAR_OUT",
+    os.path.join(os.path.dirname(__file__), "..", "web", "src", "data", "scholar.json"),
 )
 
 

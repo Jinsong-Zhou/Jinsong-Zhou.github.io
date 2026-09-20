@@ -1,3 +1,9 @@
 _site/
 push.sh
 .DS_Store
+node_modules/
+web/dist/
+web/.vite/
+*.tsbuildinfo
+.bundle/
+vendor/
