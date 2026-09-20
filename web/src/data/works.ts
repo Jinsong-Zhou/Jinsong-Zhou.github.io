@@ -89,17 +89,6 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
       },
-      {
-        id: 'systems',
-        no: '03',
-        title: '系统',
-        tagline: '智能体 · 生成 · 影视',
-        items: [
-          { name: 'NIMHub', meta: 'NVIDIA', slug: 'nimhub', tags: ['208 models'] },
-          { name: 'StoryVerse', meta: '联合创始', slug: 'storyverse', link: 'https://storyverseai.art/' },
-          { name: 'ImpText-Reader', meta: 'ICML 2026', slug: 'imptext-reader', tags: ['工具增强'] },
-        ],
-      },
     ],
   },
   en: {
@@ -140,17 +129,6 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             slug: 'dsh-html-canvas',
             link: 'https://github.com/Jinsong-Zhou/dsh-html-canvas',
           },
-        ],
-      },
-      {
-        id: 'systems',
-        no: '03',
-        title: 'Selected systems',
-        tagline: 'Agents · generation · cinema',
-        items: [
-          { name: 'NIMHub', meta: 'NVIDIA', slug: 'nimhub', tags: ['208 models'] },
-          { name: 'StoryVerse', meta: 'Co-founded', slug: 'storyverse', link: 'https://storyverseai.art/' },
-          { name: 'ImpText-Reader', meta: 'ICML 2026', slug: 'imptext-reader', tags: ['tool-augmented'] },
         ],
       },
     ],
