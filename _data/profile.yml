@@ -137,16 +137,6 @@ honors:
       by: "SUSTech"
       date: "Dec 2022"
 
-skills:
-  heading: "Skills"
-  groups:
-    - name: "Coding Agents"
-      items: ["Claude Code", "Codex", "Cursor", "DeepSeek Harness"]
-    - name: "Programming"
-      items: ["Python", "LangChain", "LangGraph", "DeepAgents"]
-    - name: "Languages"
-      items: ["English (Fluent, IELTS 7.0)", "Mandarin (Native)"]
-
 visitors:
   heading: "Visitors"
   lead: "Where readers of this page come from. Red dots are today's visitors; blue dots are everyone before them."
