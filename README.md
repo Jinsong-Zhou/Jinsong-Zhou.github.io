@@ -10,7 +10,7 @@ surfaces, and automatic light / dark themes.
 
 All page content lives in one file: [`_data/profile.yml`](_data/profile.yml).
 Edit the hero, about, experiences, publications, open source, education,
-honors, and skills sections there. Inline Markdown (links, `**bold**`) is
+and honors sections there. Inline Markdown (links, `**bold**`) is
 supported in text fields. The navigation links are in
 [`_data/navigation.yml`](_data/navigation.yml).
 

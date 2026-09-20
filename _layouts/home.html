@@ -147,24 +147,5 @@ layout: default
   </div>
 </section>
 
-<!-- Skills -->
-<section class="section" id="skills">
-  <div class="section__inner">
-    <header class="section__header reveal">
-      <h2 class="section__title">{{ p.skills.heading }}</h2>
-    </header>
-    <div class="skills reveal">
-      {% for g in p.skills.groups %}
-      <div class="skills__group">
-        <h3 class="skills__name">{{ g.name }}</h3>
-        <ul class="chips">
-          {% for s in g.items %}<li class="chip">{{ s }}</li>{% endfor %}
-        </ul>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- Visitor map (only rendered when site.visitor_map.id is set) -->
 {% include visitor_map.html %}
