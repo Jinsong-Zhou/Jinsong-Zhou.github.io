@@ -3,12 +3,32 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 53,
-  "citedby5y": 53,
+  "citedby": 54,
+  "citedby5y": 54,
   "hindex": 4,
   "i10index": 3,
   "updated": "2026-09-20",
   "publications": [
+    {
+      "id": "9GlGW1MAAAAJ:u5HHmVD_uO8C",
+      "title": "Comfymind: Toward general-purpose generation via tree-based planning and reactive feedback",
+      "authors": [
+        "Litao Guo",
+        "Xinli Xu",
+        "Luozhou Wang",
+        "Jiantao Lin",
+        "Jinsong Zhou",
+        "Zixin Zhang",
+        "Bolan Su",
+        "Yingcong Chen"
+      ],
+      "year": 2026,
+      "venue": "Advances in Neural Information Processing Systems",
+      "citations": 17,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u5HHmVD_uO8C",
+      "abstract": "With the rapid advancement of generative models, general-purpose generation has gained increasing attention as a promising approach to unify diverse tasks across modalities within a single system. Despite this progress, existing open-source frameworks often remain fragile and struggle to support complex real-world applications due to the lack of structured workflow planning and execution-level feedback. To address these limitations, we present ComfyMind, a collaborative AI system designed to enable robust and scalable general-purpose generation, built on the ComfyUI platform. ComfyMind introduces two core innovations: Semantic Workflow Interface (SWI) that abstracts low-level node graphs into callable functional modules described in natural language, enabling high-level composition and reducing structural errors; Search Tree Planning mechanism with localized feedback execution, which models generation as a hierarchical decision process and allows adaptive correction at each stage. Together, these components improve the stability and flexibility of complex generative workflows. We evaluate ComfyMind on three public benchmarks: ComfyBench, GenEval, and Reason-Edit, which span generation, editing, and reasoning tasks. Results show that ComfyMind consistently outperforms existing open-source baselines and achieves performance comparable to GPT-Image-1. ComfyMind paves a promising path for the development of open-source general-purpose generative AI systems."
+    },
     {
       "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
       "title": "Videomemory: Toward consistent video generation via memory integration",
@@ -30,26 +50,6 @@
       "url": "https://arxiv.org/abs/2601.03655",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:9yKSN-GCB0IC",
       "abstract": "Maintaining consistent characters, props, and environments across multiple shots is a central challenge in narrative video generation. Existing models can produce high-quality short clips but often fail to preserve entity identity and appearance when scenes change or when entities reappear after long temporal gaps. We present VideoMemory, an entity-centric framework that integrates narrative planning with visual generation through a Dynamic Memory Bank. Given a structured script, a multi-agent system decomposes the narrative into shots, retrieves entity representations from memory, and synthesizes keyframes and videos conditioned on these retrieved states. The Dynamic Memory Bank stores explicit visual and semantic descriptors for characters, props, and backgrounds, and is updated after each shot to reflect story-driven changes while preserving identity. This retrieval-update mechanism enables consistent portrayal of entities across distant shots and supports coherent long-form generation. To evaluate this setting, we construct a 54-case multi-shot consistency benchmark covering character-, prop-, and background-persistent scenarios. Extensive experiments show that VideoMemory achieves strong entity-level coherence and high perceptual quality across diverse narrative sequences."
-    },
-    {
-      "id": "9GlGW1MAAAAJ:u5HHmVD_uO8C",
-      "title": "Comfymind: Toward general-purpose generation via tree-based planning and reactive feedback",
-      "authors": [
-        "Litao Guo",
-        "Xinli Xu",
-        "Luozhou Wang",
-        "Jiantao Lin",
-        "Jinsong Zhou",
-        "Zixin Zhang",
-        "Bolan Su",
-        "Yingcong Chen"
-      ],
-      "year": 2026,
-      "venue": "Advances in Neural Information Processing Systems",
-      "citations": 16,
-      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html",
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u5HHmVD_uO8C",
-      "abstract": "With the rapid advancement of generative models, general-purpose generation has gained increasing attention as a promising approach to unify diverse tasks across modalities within a single system. Despite this progress, existing open-source frameworks often remain fragile and struggle to support complex real-world applications due to the lack of structured workflow planning and execution-level feedback. To address these limitations, we present ComfyMind, a collaborative AI system designed to enable robust and scalable general-purpose generation, built on the ComfyUI platform. ComfyMind introduces two core innovations: Semantic Workflow Interface (SWI) that abstracts low-level node graphs into callable functional modules described in natural language, enabling high-level composition and reducing structural errors; Search Tree Planning mechanism with localized feedback execution, which models generation as a hierarchical decision process and allows adaptive correction at each stage. Together, these components improve the stability and flexibility of complex generative workflows. We evaluate ComfyMind on three public benchmarks: ComfyBench, GenEval, and Reason-Edit, which span generation, editing, and reasoning tasks. Results show that ComfyMind consistently outperforms existing open-source baselines and achieves performance comparable to GPT-Image-1. ComfyMind paves a promising path for the development of open-source general-purpose generative AI systems."
     },
     {
       "id": "9GlGW1MAAAAJ:2osOgNQ5qMEC",
