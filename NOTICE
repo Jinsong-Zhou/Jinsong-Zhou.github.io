@@ -1,0 +1,37 @@
+# NOTICE
+
+This homepage is a personal site for **Jinsong Zhou**. The 3D résumé engine
+(React Three Fiber scene, scroll-driven camera, post-processing, HTML overlay)
+is adapted from [sen-3d-resume](https://github.com/dayinji/sen-3d-resume)
+(MIT, © 2026 Sen Zheng). That project's **code** is MIT-licensed; its
+**personal content and assets are not**.
+
+## Not copied from sen-3d-resume
+
+Per sen-3d-resume `NOTICE` / `LICENSE`, the following were **not** reused:
+
+- The 3D character `me.glb` / `blender/sen.blend` and the author's likeness
+- Résumé text, works copy, brand logos, and social links
+- `web/public/images/*` from that repo
+- The ZOOOP wordmark component
+- `web/public/textures/env.hdr` (third-party HDR; license not sublicensed)
+
+This site uses Jinsong Zhou's own name, bio, avatar, publications, and links.
+The 3D subject is an original portrait disc built at runtime from
+`web/public/images/avatar.png`, with a programmatic `CameraAction` clip that
+follows the same scroll-to-frame convention as sen-3d-resume.
+
+## Third-party fonts (SIL Open Font License)
+
+`web/public/fonts/` contains Cormorant Upright and Mansalva, originally bundled
+by sen-3d-resume from [Google Fonts](https://fonts.google.com) under the SIL
+Open Font License 1.1. Keep that license if you redistribute the fonts.
+See `web/public/fonts/OFL.txt`.
+
+## Historical AcadHomepage
+
+This repository previously shipped a Jekyll academic homepage forked from
+[AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) (MIT,
+© 2022 Yi Ren). That layout is no longer the primary site. Remaining credit
+is in `LICENSE`. Content that still matters (profile copy, Scholar snapshot)
+was migrated into `web/`.

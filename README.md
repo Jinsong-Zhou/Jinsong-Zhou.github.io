@@ -1,88 +1,72 @@
 # jinsong-zhou.github.io
 
-Personal homepage of Jinsong Zhou, built with Jekyll and hosted on GitHub Pages.
+Personal homepage of **Jinsong Zhou** — a scroll-driven 3D résumé hosted on GitHub Pages.
 
-The design follows Apple's visual language: system typography (SF Pro on Apple
-devices), generous whitespace, a frosted sticky navigation bar, rounded card
-surfaces, and automatic light / dark themes.
+The experience follows [sen-3d-resume](https://github.com/dayinji/sen-3d-resume): a fixed React Three Fiber scene whose camera is scrubbed by the scrollbar, with HTML content (About → résumé → works) in front. Code from that project is MIT; its character model and personal assets are **not** used here (see [`NOTICE`](NOTICE)).
 
-## Editing content
+Live: <https://jinsong-zhou.github.io>
 
-All page content lives in one file: [`_data/profile.yml`](_data/profile.yml).
-Edit the hero, about, experiences, publications, open source, education,
-honors, and skills sections there. Inline Markdown (links, `**bold**`) is
-supported in text fields. The navigation links are in
-[`_data/navigation.yml`](_data/navigation.yml).
+## Run locally
 
-## Structure
-
-| Path | Purpose |
-| --- | --- |
-| `_data/profile.yml` | All homepage content (plus per-paper overrides) |
-| `_data/scholar.json` | Publications and citation stats, auto-synced from Google Scholar |
-| `_pages/publications.md` + `_layouts/publications.html` | Standalone publications page |
-| `_includes/publication.html` | One publication card (shared by homepage and publications page) |
-| `_layouts/home.html` | Renders the content into sections |
-| `_layouts/default.html` | HTML shell (head, nav, footer) |
-| `_includes/` | `head`, `nav`, `footer`, `icons`, `seo`, `visitor_map` partials |
-| `assets/css/site.css` | Design system and all styles |
-| `assets/js/site.js` | Mobile menu, scroll spy, reveal animation |
-| `images/` | Avatar and favicons |
-
-## Running locally
+Requires Node.js 20+.
 
 ```bash
-bundle install
-bundle exec jekyll serve
+cd web
+npm install
+npm run dev        # http://localhost:5173
 ```
 
-Then open <http://localhost:4000>.
+Other commands (all inside `web/`):
 
-## Visitor map
+```bash
+npm run build      # typecheck + Vite bundle → web/dist/
+npm run preview    # preview the production build
+npm run typecheck
+npm run lint
+```
 
-The homepage ends with a "Visitors" section: a world map that shows where
-readers come from, with today's visitors highlighted. GitHub Pages is static
-and cannot count visitors itself, so the map is a third-party widget and
-needs a free account with one of two interchangeable providers:
+There is no Jekyll step. `web/dist/` is a static site (`base: './'`).
 
-- [ClustrMaps](https://clustrmaps.com/) (`provider: clustrmaps`)
-- [MapMyVisitors](https://mapmyvisitors.com/) (`provider: mapmyvisitors`),
-  a sister service with the same embed format; use it if ClustrMaps is
-  unreachable from your network.
+## Edit content
 
-1. Sign up and register `https://jinsong-zhou.github.io`.
-2. In the embed code you get, copy the id after `d=`.
-3. Put it in `_config.yml` under `visitor_map.id` and set `visitor_map.provider`.
-   `visitor_map.page` is the public stats page link from the dashboard, used
-   for the "Powered by" link. The section text lives under `visitors` in
-   `_data/profile.yml`.
+| What | Where |
+| --- | --- |
+| About copy (EN/中文) | `web/src/App.tsx` (`COPY`) |
+| Résumé timeline | `web/src/ui/Resume.tsx` |
+| Camera stops (must match résumé entry count) | `web/src/data/focusPoints.ts` |
+| Works gallery + paper list wiring | `web/src/data/works.ts`, `web/src/data/publications.ts` |
+| Paper / project detail pages | `web/src/content/works/<slug>.md` |
+| Scholar snapshot | `web/src/data/scholar.json` (written by the crawler) |
+| Avatar / favicons | `web/public/images/` |
+| Scene look (lights, DoF, Bloom, portrait) | `web/src/scene/Scene.tsx`, `web/src/scene/portrait.ts` |
 
-Leave `visitor_map.id` empty and the section is not rendered at all. If a
-visitor's browser cannot load the map (blocked network, provider outage),
-the section hides itself so no empty card is shown. Markup and colors are in
-`_includes/visitor_map.html`.
+The previous Jekyll `_data/profile.yml` is kept as an archive of the copy that was migrated. The Skills section from that file is **not** on the site.
 
-## Publications synced from Google Scholar
+## Publications from Google Scholar
 
-The publications page (`/publications/`) and the homepage teaser are rendered
-from `_data/scholar.json`. The GitHub Action in
-`.github/workflows/google_scholar_crawler.yaml` runs
-`google_scholar_crawler/main.py` every day (and on demand via
-"Run workflow"), fetches the Google Scholar profile
-`9GlGW1MAAAAJ`, and commits the file back to `main` when anything changed.
-GitHub Pages then rebuilds the site, so new papers and citation counts show
-up automatically.
+`.github/workflows/google_scholar_crawler.yaml` still runs daily, fetches Scholar profile `9GlGW1MAAAAJ`, and commits `web/src/data/scholar.json` when it changes. Display titles, venues, and years can be corrected in `web/src/data/publications.ts` (matched by title substring).
 
-- Google Scholar blocks GitHub Actions' IP addresses, so the sync needs a
-  proxy. Create a free account at <https://www.scraperapi.com>, copy the API
-  key, and add it as a repository secret named `SCRAPERAPI_KEY`
-  (Settings → Secrets and variables → Actions → New repository secret).
-  Without it the script still tries a direct connection and free proxies,
-  which only work occasionally.
-- To point at another profile, set a repository variable `GOOGLE_SCHOLAR_ID`
-  (Settings → Secrets and variables → Actions → Variables).
-- To fix a paper's title casing, venue, year, link, authors, or add a note,
-  add an entry under `publications.overrides` in `_data/profile.yml`; it is
-  matched by title (case-insensitive).
-- To sync locally: `pip install -r google_scholar_crawler/requirements.txt`
-  then `python google_scholar_crawler/main.py`.
+Local sync:
+
+```bash
+pip install -r google_scholar_crawler/requirements.txt
+python google_scholar_crawler/main.py
+```
+
+Needs `SCRAPERAPI_KEY` for a reliable fetch from GitHub Actions (Scholar blocks many datacenter IPs).
+
+## Deploy (GitHub Pages)
+
+This is a user site (`username.github.io`). The app is a Vite SPA; Pages must build it with Actions rather than Jekyll:
+
+1. Merge this branch to `main`.
+2. Repo **Settings → Pages → Source → GitHub Actions**.
+3. `.github/workflows/deploy.yml` runs `npm ci && npm run build` in `web/` and publishes `web/dist/`.
+
+Until that Pages source switch, pushing the Vite tree to `main` will not update the live Jekyll site.
+
+Old `/publications/` URLs redirect to `/#works`.
+
+## License
+
+MIT for code. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Do not copy sen-3d-resume's character model or personal content if you fork further.

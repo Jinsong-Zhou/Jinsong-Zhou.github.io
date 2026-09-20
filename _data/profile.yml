@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
-# All homepage content lives here. Edit this file to update the site;
-# the layout in _layouts/home.html renders it.
-# Inline Markdown (links, **bold**, *italic*) is allowed in text fields.
+# Archive of the Jekyll-era homepage copy. The live 3D site reads
+# web/src/App.tsx, web/src/ui/Resume.tsx, and web/src/data/*.
+# Skills from this file are not shown on the rebuilt site.
 # ---------------------------------------------------------------------------
 
 hero:
