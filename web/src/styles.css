@@ -118,13 +118,14 @@ canvas {
 
 /* ---------- 首屏 ---------- */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   /* 标题正文略下移 */
-  padding-bottom: 6vh;
+  padding-bottom: 3.5vh;
 }
 
 /* 首屏底部渐变底色（滚动后由 framer 控制淡出） */
@@ -296,9 +297,15 @@ canvas {
 
 /* ---------- About 叠层（标题 Rancho + 正文 Cormorant Upright） ---------- */
 .about {
+  position: relative;
   text-align: center;
   pointer-events: none;
   padding: 0 24px;
+}
+
+.about-title,
+.about-body {
+  text-shadow: 0 2px 18px rgba(10, 14, 22, 0.7), 0 0 28px rgba(10, 14, 22, 0.45);
 }
 /* 入场动画放内层：其 fill:both 只锁内层 opacity，不影响外层滚动 opacity */
 .about-intro {

@@ -101,10 +101,10 @@ function Portrait({
   dofBokehRef: MutableRefObject<number>
   dofRangeRef: MutableRefObject<number>
 }) {
-  const posX = 0
-  const posY = 0.4
+  const posX = -0.35
+  const posY = 0.55
   const posZ = -0.7
-  const scale = 1.55
+  const scale = 1.38
   const rotationY = 0
 
   const cam = {

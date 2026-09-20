@@ -104,6 +104,7 @@ export default function App() {
   const fogBg = useTransform(worksProgress, [0, 1], ['rgba(8, 11, 18, 0)', 'rgba(8, 11, 18, 0.41)'])
   const scrimOpacity = useTransform(scrollY, [0, 520], [0, 0.4])
   const cueOpacity = useTransform(scrollY, [0, 160], [1, 0])
+  const heroGradientOpacity = useTransform(scrollY, [0, 240], [1, 0])
   const vh = typeof window !== 'undefined' ? window.innerHeight : 800
   const railOpacity = useTransform(scrollY, [vh * 0.5, vh * 1.1], [0, 1])
   const heroChromeOpacity = useTransform(scrollY, [0, 280], [1, 0])
@@ -130,6 +131,7 @@ export default function App() {
       <motion.div className="scrim" style={{ opacity: scrimOpacity }} aria-hidden="true" />
       <motion.div className="stage-fog" style={{ background: fogBg }} aria-hidden="true" />
       <motion.div className="glass-rail" style={{ opacity: railOpacity }} aria-hidden="true" />
+      <motion.div className="hero-gradient" style={{ opacity: heroGradientOpacity }} aria-hidden="true" />
 
       <LangToggle lang={lang} onToggle={() => setLang((l) => (l === 'en' ? 'zh' : 'en'))} />
 

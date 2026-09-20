@@ -16,14 +16,14 @@ function cameraKeys(nodeCount: number): CamKey[] {
   const total = resumeEnd + WORKS_TAIL_FRAMES
   // Subject sits slightly left of frame so the HTML résumé can occupy the right rail.
   return [
-    { frame: 0, pos: [1.85, 1.42, 5.15], target: [-0.28, 1.22, 0], fov: 33 },
-    { frame: FRAMES_PER_NODE, pos: [1.35, 1.48, 4.35], target: [-0.22, 1.2, 0], fov: 31 },
-    { frame: FRAMES_PER_NODE * 2, pos: [0.72, 1.62, 3.85], target: [-0.18, 1.28, 0], fov: 29 },
-    { frame: FRAMES_PER_NODE * 3, pos: [0.18, 1.72, 4.55], target: [-0.12, 1.32, 0], fov: 30 },
-    { frame: FRAMES_PER_NODE * 4, pos: [1.55, 1.38, 3.55], target: [-0.3, 1.18, 0], fov: 27 },
-    { frame: resumeEnd, pos: [1.95, 1.68, 5.05], target: [-0.08, 1.22, 0], fov: 34 },
-    { frame: resumeEnd + 50, pos: [0.55, 1.95, 6.4], target: [0.05, 1.15, 0], fov: 38 },
-    { frame: total, pos: [0.15, 2.15, 7.6], target: [0.1, 1.05, 0], fov: 40 },
+    { frame: 0, pos: [2.15, 0.72, 5.55], target: [-0.55, 1.62, 0], fov: 32 },
+    { frame: FRAMES_PER_NODE, pos: [1.45, 1.28, 4.45], target: [-0.28, 1.28, 0], fov: 31 },
+    { frame: FRAMES_PER_NODE * 2, pos: [0.78, 1.48, 3.95], target: [-0.2, 1.32, 0], fov: 29 },
+    { frame: FRAMES_PER_NODE * 3, pos: [0.22, 1.62, 4.65], target: [-0.12, 1.36, 0], fov: 30 },
+    { frame: FRAMES_PER_NODE * 4, pos: [1.55, 1.22, 3.65], target: [-0.32, 1.22, 0], fov: 27 },
+    { frame: resumeEnd, pos: [1.95, 1.55, 5.15], target: [-0.1, 1.28, 0], fov: 34 },
+    { frame: resumeEnd + 50, pos: [0.55, 1.85, 6.5], target: [0.05, 1.18, 0], fov: 38 },
+    { frame: total, pos: [0.15, 2.05, 7.7], target: [0.1, 1.08, 0], fov: 40 },
   ]
 }
 
