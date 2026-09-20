@@ -81,7 +81,8 @@ up automatically.
   which only work occasionally.
 - To point at another profile, set a repository variable `GOOGLE_SCHOLAR_ID`
   (Settings → Secrets and variables → Actions → Variables).
-- To fix a venue name, link, or add a note for a paper, add an entry under
-  `publications.overrides` in `_data/profile.yml`; it is matched by title.
+- To fix a paper's title casing, venue, year, link, authors, or add a note,
+  add an entry under `publications.overrides` in `_data/profile.yml`; it is
+  matched by title (case-insensitive).
 - To sync locally: `pip install -r google_scholar_crawler/requirements.txt`
   then `python google_scholar_crawler/main.py`.

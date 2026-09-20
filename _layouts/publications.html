@@ -27,13 +27,17 @@ layout: default
 
 <section class="section section--alt">
   <div class="section__inner">
-    {%- assign years = gs.publications | map: "year" | uniq | sort | reverse -%}
+    {%- capture years_raw -%}
+      {%- for pub in gs.publications -%}{% include pub_year.html pub=pub %},{%- endfor -%}
+    {%- endcapture -%}
+    {%- assign years = years_raw | strip | split: "," | uniq | sort | reverse -%}
     {%- for y in years -%}
     <div class="year-group reveal">
-      <h2 class="year-group__title">{{ y | default: "Other" }}</h2>
+      <h2 class="year-group__title">{% if y == "" %}Other{% else %}{{ y }}{% endif %}</h2>
       <div class="stack">
         {%- for pub in gs.publications -%}
-          {%- if pub.year == y -%}{% include publication.html pub=pub %}{%- endif -%}
+          {%- capture pub_y -%}{% include pub_year.html pub=pub %}{%- endcapture -%}
+          {%- if pub_y == y -%}{% include publication.html pub=pub %}{%- endif -%}
         {%- endfor -%}
       </div>
     </div>
