@@ -3,11 +3,11 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 54,
-  "citedby5y": 54,
+  "citedby": 55,
+  "citedby5y": 55,
   "hindex": 4,
   "i10index": 3,
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "publications": [
     {
       "id": "9GlGW1MAAAAJ:u5HHmVD_uO8C",
@@ -83,7 +83,7 @@
       ],
       "year": 2025,
       "venue": "MedComm–Future Medicine",
-      "citations": 13,
+      "citations": 14,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mef2.70021",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u-x6o8ySG0sC",
       "abstract": "DeepSeek‐R1 is an open‐source Large Language Model (LLM) with advanced reasoning capabilities. It has gained significant attention for its impressive advantages including low costs and visualized reasoning steps. Recent advancements in reasoning LLMs like ChatGPT‐o1 have significantly exhibited their considerable reasoning potential, but the closed‐source nature of existing models limits customization and transparency, presenting substantial barriers to their integration into healthcare systems. This gap motivates the exploration of DeepSeek‐R1 in the medical field. Thus, we comprehensively review the transformative potential, applications, and challenges of DeepSeek‐R1 in healthcare. Specifically, we investigate how DeepSeek‐R1 can enhance clinical decision support, patient engagement, and medical education to help for clinic, outpatient and medical research. Furthermore, we critically evaluate …"
