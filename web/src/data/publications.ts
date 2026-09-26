@@ -16,21 +16,37 @@ export interface DisplayPub extends ScholarPub {
   displayTitle: string
   note?: string
   slug: string
+  homepage?: string
+  github?: string
 }
 
-const OVERRIDES: { match: string; title: string; url?: string; venue?: string; year?: number; note?: string }[] = [
+type PubOverride = {
+  match: string
+  title: string
+  url?: string
+  venue?: string
+  year?: number
+  note?: string
+  homepage?: string
+  github?: string
+}
+
+const OVERRIDES: PubOverride[] = [
   {
     match: 'videomemory',
     title: 'VideoMemory: Toward Consistent Video Generation via Memory Integration',
     url: 'https://arxiv.org/abs/2601.03655',
     venue: 'arXiv',
     note: 'arXiv:2601.03655 · AAAI 2027 under review',
+    homepage: 'https://hit-perfect.github.io/VideoMemory/',
+    github: 'https://github.com/EnVision-Research/VideoMemory',
   },
   {
     match: 'imptext',
     title: 'ImpText: A Benchmark and Tool-Augmented Framework for Implicit Text Reasoning',
     url: 'https://icml.cc/virtual/2026/poster/63174',
     venue: 'ICML',
+    github: 'https://github.com/LitaoGuo/ImpText',
   },
   {
     match: 'comfymind',
@@ -38,6 +54,8 @@ const OVERRIDES: { match: string; title: string; url?: string; venue?: string; y
     url: 'https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html',
     venue: 'NeurIPS',
     year: 2025,
+    homepage: 'https://litaoguo.github.io/ComfyMind.github.io/',
+    github: 'https://github.com/EnVision-Research/ComfyMind',
   },
   {
     match: 'presentcoach',
@@ -50,6 +68,19 @@ const OVERRIDES: { match: string; title: string; url?: string; venue?: string; y
     venue: 'MedComm',
   },
 ]
+
+/** Highlight Jinsong Zhou / 周劲松 / J. Zhou-style variants in author lists. */
+export function isHighlightedAuthor(name: string): boolean {
+  const compact = name.normalize('NFKC').replace(/[.,]/g, ' ').replace(/\s+/g, ' ').trim()
+  if (!compact) return false
+  if (compact.includes('周劲松')) return true
+  const tokens = compact.toLowerCase().split(' ')
+  const hasZhou = tokens.includes('zhou')
+  const hasJinsong = tokens.includes('jinsong')
+  if (hasZhou && hasJinsong) return true
+  if (hasZhou && tokens.includes('j') && tokens.length <= 3) return true
+  return false
+}
 
 function slugify(title: string): string {
   const t = title.toLowerCase()
@@ -73,6 +104,8 @@ export function getPublications(): DisplayPub[] {
       year: o?.year ?? p.year,
       note: o?.note,
       slug: slugify(p.title),
+      homepage: o?.homepage,
+      github: o?.github,
     }
   })
 }
