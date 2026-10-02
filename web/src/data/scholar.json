@@ -3,11 +3,11 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 56,
-  "citedby5y": 56,
+  "citedby": 57,
+  "citedby5y": 57,
   "hindex": 4,
   "i10index": 3,
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "publications": [
     {
       "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
@@ -26,7 +26,7 @@
       ],
       "year": 2026,
       "venue": "arXiv preprint arXiv:2601.03655",
-      "citations": 18,
+      "citations": 19,
       "url": "https://arxiv.org/abs/2601.03655",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:9yKSN-GCB0IC",
       "abstract": "Maintaining consistent characters, props, and environments across multiple shots is a central challenge in narrative video generation. Existing models can produce high-quality short clips but often fail to preserve entity identity and appearance when scenes change or when entities reappear after long temporal gaps. We present VideoMemory, an entity-centric framework that integrates narrative planning with visual generation through a Dynamic Memory Bank. Given a structured script, a multi-agent system decomposes the narrative into shots, retrieves entity representations from memory, and synthesizes keyframes and videos conditioned on these retrieved states. The Dynamic Memory Bank stores explicit visual and semantic descriptors for characters, props, and backgrounds, and is updated after each shot to reflect story-driven changes while preserving identity. This retrieval-update mechanism enables consistent portrayal of entities across distant shots and supports coherent long-form generation. To evaluate this setting, we construct a 54-case multi-shot consistency benchmark covering character-, prop-, and background-persistent scenarios. Extensive experiments show that VideoMemory achieves strong entity-level coherence and high perceptual quality across diverse narrative sequences."
