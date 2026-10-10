@@ -3,11 +3,11 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 61,
-  "citedby5y": 61,
+  "citedby": 62,
+  "citedby5y": 62,
   "hindex": 4,
   "i10index": 3,
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "publications": [
     {
       "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
@@ -45,7 +45,7 @@
         "Yingcong Chen"
       ],
       "year": 2026,
-      "venue": "Advances in Neural Information Processing Systems 38, 45128-45164",
+      "venue": "Advances in Neural Information Processing Systems",
       "citations": 19,
       "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u5HHmVD_uO8C",
@@ -83,7 +83,7 @@
       ],
       "year": 2025,
       "venue": "MedComm–Future Medicine",
-      "citations": 14,
+      "citations": 15,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mef2.70021",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u-x6o8ySG0sC",
       "abstract": "DeepSeek‐R1 is an open‐source Large Language Model (LLM) with advanced reasoning capabilities. It has gained significant attention for its impressive advantages including low costs and visualized reasoning steps. Recent advancements in reasoning LLMs like ChatGPT‐o1 have significantly exhibited their considerable reasoning potential, but the closed‐source nature of existing models limits customization and transparency, presenting substantial barriers to their integration into healthcare systems. This gap motivates the exploration of DeepSeek‐R1 in the medical field. Thus, we comprehensively review the transformative potential, applications, and challenges of DeepSeek‐R1 in healthcare. Specifically, we investigate how DeepSeek‐R1 can enhance clinical decision support, patient engagement, and medical education to help for clinic, outpatient and medical research. Furthermore, we critically evaluate …"
