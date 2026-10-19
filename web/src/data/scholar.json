@@ -3,11 +3,11 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 64,
-  "citedby5y": 64,
+  "citedby": 65,
+  "citedby5y": 65,
   "hindex": 4,
   "i10index": 3,
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "publications": [
     {
       "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
@@ -45,7 +45,7 @@
         "Yingcong Chen"
       ],
       "year": 2026,
-      "venue": "Advances in Neural Information Processing Systems 38, 45128-45164",
+      "venue": "Advances in Neural Information Processing Systems",
       "citations": 20,
       "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u5HHmVD_uO8C",
@@ -82,7 +82,7 @@
         "Hao Chen"
       ],
       "year": 2025,
-      "venue": "MedComm–Future Medicine",
+      "venue": "MedComm–Future Medicine 4 (2), e70021",
       "citations": 15,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mef2.70021",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u-x6o8ySG0sC",
@@ -101,7 +101,7 @@
       ],
       "year": 2025,
       "venue": "arXiv preprint arXiv:2511.15253",
-      "citations": 7,
+      "citations": 8,
       "url": "https://arxiv.org/abs/2511.15253",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:d1gkVwhDpl0C",
       "abstract": "Effective presentation skills are essential in education, professional communication, and public speaking, yet learners often lack access to high-quality exemplars or personalized coaching. Existing AI tools typically provide isolated functionalities such as speech scoring or script generation without integrating reference modeling and interactive feedback into a cohesive learning experience. We introduce a dual-agent system that supports presentation practice through two complementary roles: the Ideal Presentation Agent and the Coach Agent. The Ideal Presentation Agent converts user-provided slides into model presentation videos by combining slide processing, visual-language analysis, narration script generation, personalized voice synthesis, and synchronized video assembly. The Coach Agent then evaluates user-recorded presentations against these exemplars, conducting multimodal speech analysis and delivering structured feedback in an Observation-Impact-Suggestion (OIS) format. To enhance the authenticity of the learning experience, the Coach Agent incorporates an Audience Agent, which simulates the perspective of a human listener and provides humanized feedback reflecting audience reactions and engagement. Together, these agents form a closed loop of observation, practice, and feedback. Implemented on a robust backend with multi-model integration, voice cloning, and error handling mechanisms, the system demonstrates how AI-driven agents can provide engaging, human-centered, and scalable support for presentation skill development in both educational and professional contexts."
