@@ -3,11 +3,11 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 66,
-  "citedby5y": 66,
+  "citedby": 68,
+  "citedby5y": 68,
   "hindex": 4,
   "i10index": 3,
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "publications": [
     {
       "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
@@ -26,7 +26,7 @@
       ],
       "year": 2026,
       "venue": "arXiv preprint arXiv:2601.03655",
-      "citations": 23,
+      "citations": 24,
       "url": "https://arxiv.org/abs/2601.03655",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:9yKSN-GCB0IC",
       "abstract": "Maintaining consistent characters, props, and environments across multiple shots is a central challenge in narrative video generation. Existing models can produce high-quality short clips but often fail to preserve entity identity and appearance when scenes change or when entities reappear after long temporal gaps. We present VideoMemory, an entity-centric framework that integrates narrative planning with visual generation through a Dynamic Memory Bank. Given a structured script, a multi-agent system decomposes the narrative into shots, retrieves entity representations from memory, and synthesizes keyframes and videos conditioned on these retrieved states. The Dynamic Memory Bank stores explicit visual and semantic descriptors for characters, props, and backgrounds, and is updated after each shot to reflect story-driven changes while preserving identity. This retrieval-update mechanism enables consistent portrayal of entities across distant shots and supports coherent long-form generation. To evaluate this setting, we construct a 54-case multi-shot consistency benchmark covering character-, prop-, and background-persistent scenarios. Extensive experiments show that VideoMemory achieves strong entity-level coherence and high perceptual quality across diverse narrative sequences."
@@ -101,7 +101,7 @@
       ],
       "year": 2025,
       "venue": "arXiv preprint arXiv:2511.15253",
-      "citations": 8,
+      "citations": 9,
       "url": "https://arxiv.org/abs/2511.15253",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:d1gkVwhDpl0C",
       "abstract": "Effective presentation skills are essential in education, professional communication, and public speaking, yet learners often lack access to high-quality exemplars or personalized coaching. Existing AI tools typically provide isolated functionalities such as speech scoring or script generation without integrating reference modeling and interactive feedback into a cohesive learning experience. We introduce a dual-agent system that supports presentation practice through two complementary roles: the Ideal Presentation Agent and the Coach Agent. The Ideal Presentation Agent converts user-provided slides into model presentation videos by combining slide processing, visual-language analysis, narration script generation, personalized voice synthesis, and synchronized video assembly. The Coach Agent then evaluates user-recorded presentations against these exemplars, conducting multimodal speech analysis and delivering structured feedback in an Observation-Impact-Suggestion (OIS) format. To enhance the authenticity of the learning experience, the Coach Agent incorporates an Audience Agent, which simulates the perspective of a human listener and provides humanized feedback reflecting audience reactions and engagement. Together, these agents form a closed loop of observation, practice, and feedback. Implemented on a robust backend with multi-model integration, voice cloning, and error handling mechanisms, the system demonstrates how AI-driven agents can provide engaging, human-centered, and scalable support for presentation skill development in both educational and professional contexts."
