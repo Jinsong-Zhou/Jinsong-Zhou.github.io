@@ -5,15 +5,62 @@ import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import { WORKS, SECTION_COVERS, type WorkListItem, type WorkSection, type WorksLang } from '../data/works'
 import { getWorkDoc } from '../data/workDocs'
+import { isHighlightedAuthor } from '../data/publications'
 
 const EASE = [0.22, 1, 0.36, 1]
 
+function AuthorNames({ authors }: { authors: string[] }) {
+  return (
+    <p className="wk-line-authors">
+      {authors.map((name, i) => (
+        <span key={`${name}-${i}`}>
+          {i > 0 && ', '}
+          {isHighlightedAuthor(name) ? <strong className="wk-line-self">{name}</strong> : name}
+        </span>
+      ))}
+    </p>
+  )
+}
+
+function ProjectLinks({
+  item,
+  data,
+}: {
+  item: WorkListItem
+  data: WorksLang
+}) {
+  if (!item.homepage && !item.github) return null
+  return (
+    <span className="wk-line-links">
+      {item.homepage && (
+        <a href={item.homepage} target="_blank" rel="noopener noreferrer">
+          {data.siteLabel}
+        </a>
+      )}
+      {item.github && (
+        <a href={item.github} target="_blank" rel="noopener noreferrer">
+          {data.codeLabel}
+        </a>
+      )}
+    </span>
+  )
+}
+
 // 极简清单的一行：作品名靠左、数据(播放量/标签)靠右、发丝线分隔；整行可点开全屏详情
-function WorkLine({ item, onOpen }: { item: WorkListItem; onOpen: (item: WorkListItem) => void }) {
+function WorkLine({
+  item,
+  data,
+  onOpen,
+}: {
+  item: WorkListItem
+  data: WorksLang
+  onOpen: (item: WorkListItem) => void
+}) {
   const hasMeta = item.meta || (item.tags && item.tags.length)
+  const hasSub = (item.authors && item.authors.length > 0) || item.homepage || item.github
   return (
     <li className="wk-line">
-      <button className="wk-line-btn" onClick={() => onOpen(item)}>
+      <button className={`wk-line-btn${hasSub ? ' has-sub' : ''}`} onClick={() => onOpen(item)}>
         <span className="wk-line-name">{item.name}</span>
         {hasMeta && (
           <span className="wk-line-meta">
@@ -27,6 +74,12 @@ function WorkLine({ item, onOpen }: { item: WorkListItem; onOpen: (item: WorkLis
           </span>
         )}
       </button>
+      {hasSub && (
+        <div className="wk-line-sub">
+          {item.authors && item.authors.length > 0 ? <AuthorNames authors={item.authors} /> : <span />}
+          <ProjectLinks item={item} data={data} />
+        </div>
+      )}
     </li>
   )
 }
@@ -77,9 +130,9 @@ function SectionWorks({
   return (
     <div className="wk-card-body">
       {section.items && (
-        <ul className="wk-list">
+            <ul className="wk-list">
           {section.items.map((it, i) => (
-            <WorkLine key={i} item={it} onOpen={onOpen} />
+            <WorkLine key={i} item={it} data={data} onOpen={onOpen} />
           ))}
         </ul>
       )}
@@ -89,8 +142,8 @@ function SectionWorks({
           <div key={gi} className="wk-sub">
             <div className="wk-sub-head">{g.heading}</div>
             <ul className="wk-list">
-              {g.items.map((it, i) => (
-                <WorkLine key={i} item={{ name: it }} onOpen={onOpen} />
+              {              g.items.map((it, i) => (
+                <WorkLine key={i} item={{ name: it }} data={data} onOpen={onOpen} />
               ))}
             </ul>
           </div>
@@ -166,6 +219,7 @@ function WorkDetail({
         <article className="wk-detail-article">
           <header className="wk-detail-head">
             <h3 className="wk-detail-title">{title}</h3>
+            {item.authors && item.authors.length > 0 && <AuthorNames authors={item.authors} />}
             {sub && <div className="wk-detail-sub">{sub}</div>}
             {tags && tags.length > 0 && (
               <div className="wk-detail-tags">
@@ -176,6 +230,7 @@ function WorkDetail({
                 ))}
               </div>
             )}
+            <ProjectLinks item={item} data={data} />
           </header>
 
           {doc && doc.body ? (
