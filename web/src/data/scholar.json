@@ -7,7 +7,7 @@
   "citedby5y": 70,
   "hindex": 4,
   "i10index": 3,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "publications": [
     {
       "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
@@ -50,6 +50,17 @@
       "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/40168e00bf87869c5d153e934d8a3602-Abstract-Conference.html",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u5HHmVD_uO8C",
       "abstract": "With the rapid advancement of generative models, general-purpose generation has gained increasing attention as a promising approach to unify diverse tasks across modalities within a single system. Despite this progress, existing open-source frameworks often remain fragile and struggle to support complex real-world applications due to the lack of structured workflow planning and execution-level feedback. To address these limitations, we present ComfyMind, a collaborative AI system designed to enable robust and scalable general-purpose generation, built on the ComfyUI platform. ComfyMind introduces two core innovations: Semantic Workflow Interface (SWI) that abstracts low-level node graphs into callable functional modules described in natural language, enabling high-level composition and reducing structural errors; Search Tree Planning mechanism with localized feedback execution, which models generation as a hierarchical decision process and allows adaptive correction at each stage. Together, these components improve the stability and flexibility of complex generative workflows. We evaluate ComfyMind on three public benchmarks: ComfyBench, GenEval, and Reason-Edit, which span generation, editing, and reasoning tasks. Results show that ComfyMind consistently outperforms existing open-source baselines and achieves performance comparable to GPT-Image-1. ComfyMind paves a promising path for the development of open-source general-purpose generative AI systems."
+    },
+    {
+      "id": "9GlGW1MAAAAJ:qjMakFHDy7sC",
+      "title": "MemT-1.0: Towards Memory-Native Evolution",
+      "authors": [],
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2610.26825",
+      "citations": 0,
+      "url": "",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:qjMakFHDy7sC",
+      "abstract": ""
     },
     {
       "id": "9GlGW1MAAAAJ:2osOgNQ5qMEC",
