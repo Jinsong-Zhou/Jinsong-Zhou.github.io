@@ -3,11 +3,11 @@
   "profile_url": "https://scholar.google.com/citations?user=9GlGW1MAAAAJ",
   "name": "Jinsong Zhou",
   "affiliation": "HKUST(GZ)",
-  "citedby": 70,
-  "citedby5y": 70,
+  "citedby": 72,
+  "citedby5y": 72,
   "hindex": 4,
   "i10index": 3,
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "publications": [
     {
       "id": "9GlGW1MAAAAJ:9yKSN-GCB0IC",
@@ -26,7 +26,7 @@
       ],
       "year": 2026,
       "venue": "arXiv preprint arXiv:2601.03655",
-      "citations": 25,
+      "citations": 26,
       "url": "https://arxiv.org/abs/2601.03655",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:9yKSN-GCB0IC",
       "abstract": "Maintaining consistent characters, props, and environments across multiple shots is a central challenge in narrative video generation. Existing models can produce high-quality short clips but often fail to preserve entity identity and appearance when scenes change or when entities reappear after long temporal gaps. We present VideoMemory, an entity-centric framework that integrates narrative planning with visual generation through a Dynamic Memory Bank. Given a structured script, a multi-agent system decomposes the narrative into shots, retrieves entity representations from memory, and synthesizes keyframes and videos conditioned on these retrieved states. The Dynamic Memory Bank stores explicit visual and semantic descriptors for characters, props, and backgrounds, and is updated after each shot to reflect story-driven changes while preserving identity. This retrieval-update mechanism enables consistent portrayal of entities across distant shots and supports coherent long-form generation. To evaluate this setting, we construct a 54-case multi-shot consistency benchmark covering character-, prop-, and background-persistent scenarios. Extensive experiments show that VideoMemory achieves strong entity-level coherence and high perceptual quality across diverse narrative sequences."
@@ -94,7 +94,7 @@
       ],
       "year": 2025,
       "venue": "MedComm–Future Medicine 4 (2), e70021",
-      "citations": 16,
+      "citations": 17,
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mef2.70021",
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9GlGW1MAAAAJ&citation_for_view=9GlGW1MAAAAJ:u-x6o8ySG0sC",
       "abstract": "DeepSeek‐R1 is an open‐source Large Language Model (LLM) with advanced reasoning capabilities. It has gained significant attention for its impressive advantages including low costs and visualized reasoning steps. Recent advancements in reasoning LLMs like ChatGPT‐o1 have significantly exhibited their considerable reasoning potential, but the closed‐source nature of existing models limits customization and transparency, presenting substantial barriers to their integration into healthcare systems. This gap motivates the exploration of DeepSeek‐R1 in the medical field. Thus, we comprehensively review the transformative potential, applications, and challenges of DeepSeek‐R1 in healthcare. Specifically, we investigate how DeepSeek‐R1 can enhance clinical decision support, patient engagement, and medical education to help for clinic, outpatient and medical research. Furthermore, we critically evaluate …"
