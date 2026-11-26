@@ -910,10 +910,10 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: clamp(26px, 5vh, 56px);
+  gap: clamp(18px, 3.4vh, 40px);
   width: var(--wk-card-w);
   height: 100%;
-  padding: clamp(56px, 11vh, 132px) clamp(40px, 5vw, 76px) clamp(40px, 7vh, 80px);
+  padding: clamp(48px, 8vh, 108px) clamp(40px, 5vw, 76px) clamp(28px, 5vh, 64px);
   /* 去圆角，相邻处以左边框作分隔 */
   border: none;
   border-left: 1px solid var(--line);
@@ -931,7 +931,7 @@ canvas {
   position: relative;
   flex: none;
   align-self: flex-end;
-  width: clamp(160px, 22vw, 240px);
+  width: clamp(140px, 18vw, 210px);
   margin-right: clamp(12px, 6%, 80px);
   aspect-ratio: 3 / 2;
   border-radius: 12px;
@@ -1062,7 +1062,7 @@ canvas {
   justify-content: space-between;
   gap: clamp(16px, 4vw, 64px);
   width: 100%;
-  padding: clamp(14px, 2.2vh, 26px) 0;
+  padding: clamp(10px, 1.5vh, 18px) 0;
   border: none;
   background: none;
   color: inherit;
@@ -1118,6 +1118,53 @@ canvas {
   content: '·';
   margin-right: 0.6em;
   color: rgba(244, 241, 234, 0.3);
+}
+
+.wk-line-btn.has-sub {
+  padding-bottom: 6px;
+}
+
+.wk-line-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 0 0 clamp(10px, 1.6vh, 18px);
+}
+
+.wk-line-authors {
+  margin: 0;
+  font-size: clamp(10.5px, 1.05vw, 12.5px);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  color: rgba(244, 241, 234, 0.48);
+}
+
+.wk-line-self {
+  font-weight: 600;
+  color: #ffd9b3;
+}
+
+.wk-line-links {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.15em 0.85em;
+}
+
+.wk-line-links a {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffd9b3;
+  text-decoration: none;
+}
+
+.wk-line-links a:hover,
+.wk-line-links a:focus-visible {
+  text-decoration: underline;
+  outline: none;
 }
 
 /* 分组（其他板块）：小标题 + 同款清单 */
@@ -1284,6 +1331,15 @@ canvas {
   font-size: clamp(12px, 1.2vw, 14px);
   letter-spacing: 0.08em;
   color: var(--muted);
+}
+.wk-detail-head .wk-line-authors {
+  margin-top: 0.7em;
+  font-size: clamp(13px, 1.25vw, 15px);
+  color: rgba(244, 241, 234, 0.62);
+}
+.wk-detail-head .wk-line-links {
+  margin-top: 0.9em;
+  justify-content: flex-start;
 }
 .wk-detail-tags {
   display: flex;
@@ -1551,6 +1607,13 @@ canvas {
     max-width: 100%;
     justify-content: flex-start;
     text-align: left;
+  }
+  .wk-line-sub {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wk-line-links {
+    justify-content: flex-start;
   }
 
   /* 窄屏字号整体放大一档，作品文字更醒目 */

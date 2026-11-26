@@ -6,6 +6,9 @@ export interface WorkListItem {
   tags?: string[]
   link?: string
   slug?: string
+  authors?: string[]
+  homepage?: string
+  github?: string
 }
 
 export interface WorkGroup {
@@ -31,6 +34,8 @@ export interface WorksLang {
   hint: string
   awardsLabel: string
   visitLabel: string
+  siteLabel: string
+  codeLabel: string
   detailPlaceholder: string
   phImageLabel: string
   phButtonLabel: string
@@ -46,6 +51,9 @@ const pubItems: WorkListItem[] = pubs.map((p) => ({
   tags: p.citations ? [`${p.citations} cites`] : undefined,
   link: p.url || p.scholar_url,
   slug: p.slug,
+  authors: p.authors,
+  homepage: p.homepage,
+  github: p.github,
 }))
 
 export const WORKS: Record<'zh' | 'en', WorksLang> = {
@@ -56,6 +64,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: '继续下滑',
     awardsLabel: '引用',
     visitLabel: '打开链接',
+    siteLabel: '主页',
+    codeLabel: 'GitHub',
     detailPlaceholder: '论文摘要见 Google Scholar。',
     phImageLabel: '图片 / 视频',
     phButtonLabel: '跳转按钮',
@@ -89,17 +99,6 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
       },
-      {
-        id: 'systems',
-        no: '03',
-        title: '系统',
-        tagline: '智能体 · 生成 · 影视',
-        items: [
-          { name: 'NIMHub', meta: 'NVIDIA', slug: 'nimhub', tags: ['208 models'] },
-          { name: 'StoryVerse', meta: '联合创始', slug: 'storyverse', link: 'https://storyverseai.art/' },
-          { name: 'ImpText-Reader', meta: 'ICML 2026', slug: 'imptext-reader', tags: ['工具增强'] },
-        ],
-      },
     ],
   },
   en: {
@@ -109,6 +108,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: 'Keep scrolling',
     awardsLabel: 'Citations',
     visitLabel: 'Open link',
+    siteLabel: 'Site',
+    codeLabel: 'GitHub',
     detailPlaceholder: 'See Google Scholar for the paper abstract.',
     phImageLabel: 'Image / Video',
     phButtonLabel: 'Link button',
@@ -140,17 +141,6 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             slug: 'dsh-html-canvas',
             link: 'https://github.com/Jinsong-Zhou/dsh-html-canvas',
           },
-        ],
-      },
-      {
-        id: 'systems',
-        no: '03',
-        title: 'Selected systems',
-        tagline: 'Agents · generation · cinema',
-        items: [
-          { name: 'NIMHub', meta: 'NVIDIA', slug: 'nimhub', tags: ['208 models'] },
-          { name: 'StoryVerse', meta: 'Co-founded', slug: 'storyverse', link: 'https://storyverseai.art/' },
-          { name: 'ImpText-Reader', meta: 'ICML 2026', slug: 'imptext-reader', tags: ['tool-augmented'] },
         ],
       },
     ],
